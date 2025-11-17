@@ -1,0 +1,16 @@
+{
+  "client_id": "did:tdw:QmQj7Bq8H2tc8VaJ6AnNdJ5LWz7rYRpoyvStaejNLqDwrA:identifier-reg.trust-infra.swiyu-int.admin.ch:api:v1:did:af38c85d-c980-486b-b200-2a30551ead83",
+  "client_name#en": "SAP Demo",
+  "client_name#fr": "Vérificateur de démonstration de développement",
+  "client_name#de-DE": "Entwicklungs-Demo-Verifizierer",
+  "client_name#de-CH": "Entwickligs-Demo-Verifizier",
+  "client_name#de": "Entwicklungs-Demo-Verifizierer (Fallback DE)",
+  "client_name": "DEV Demo Verifier (Base)",
+  "logo_uri": "https://matthiasbeeler.github.io/ghPagesTest/SAP_logo.png",
+  "logo_uri#fr": "www.example.com/logo_fr.png",
+  "vp_formats": {
+    "jwt_vp": {
+      "alg": ["ES256"]
+    }
+  }
+}
