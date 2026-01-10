@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>French → German Lyrics Translator</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background: #121212;
+    color: #eee;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  textarea, button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  button {
+    background: #2d7dff;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  .line {
+    margin: 14px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+  }
+  .fr { font-weight: bold; }
+  .de { color: #aaa; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<h1>French → German Lyrics Translator</h1>
+
+<textarea id="lyrics" rows="10" placeholder="Paste French lyrics here..."></textarea>
+<button onclick="translateLyrics()">Translate</button>
+
+<div id="output"></div>
+
+<script>
+async function translateLyrics() {
+  const text = document.getElementById("lyrics").value.trim();
+  const output = document.getElementById("output");
+  output.innerHTML = "";
+
+  if (!text) {
+    output.textContent = "Please paste lyrics.";
+    return;
+  }
+
+  const lines = text.split("\n").filter(l => l.trim());
+
+  for (const line of lines) {
+    const translated = await translateLine(line);
+
+    const div = document.createElement("div");
+    div.className = "line";
+    div.innerHTML = `
+      <div class="fr">${escapeHtml(line)}</div>
+      <div class="de">${escapeHtml(translated)}</div>
+    `;
+    output.appendChild(div);
+  }
+}
+
+async function translateLine(text) {
+  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=fr|de`;
+  const res = await fetch(url);
+  const data = await res.json();
+  return data.responseData.translatedText || "";
+}
+
+function escapeHtml(str) {
+  return str.replace(/[&<>"']/g, m => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#039;"
+  })[m]);
+}
+</script>
+
+</body>
+</html>

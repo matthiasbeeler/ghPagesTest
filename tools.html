@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Repository Index</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; background: #f4f4f9; }
+        h1 { color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        ul { list-style: none; padding: 0; }
+        li { background: white; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; }
+        a { text-decoration: none; color: #0066cc; font-weight: bold; font-size: 1.1em; }
+        a:hover { text-decoration: underline; }
+        .file-name { color: #888; font-size: 0.85em; font-family: monospace; }
+        .loading { font-style: italic; color: #666; }
+    </style>
+</head>
+<body>
+
+    <h1>My Tool Repository</h1>
+    <div id="loader" class="loading">Scanning repository for tools...</div>
+    <ul id="file-list"></ul>
+
+    <script>
+        // --- CONFIGURATION ---
+        const USERNAME = 'matthiasbeeler';
+        const REPO = 'ghPagesTools';
+        // If your tools are in a subfolder, put the path here (e.g., 'tools'). Leave empty '' for root.
+        const FOLDER_PATH = '/tools/'; 
+
+        async function fetchFiles() {
+            const listElement = document.getElementById('file-list');
+            const loader = document.getElementById('loader');
+            
+            try {
+                // 1. Get list of files from GitHub API
+                const response = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FOLDER_PATH}`);
+                const files = await response.json();
+
+                // 2. Filter for HTML files (excluding index.html itself)
+                const htmlFiles = files.filter(file => 
+                    file.name.endsWith('.html') && file.name !== 'tools.html'
+                );
+                console.log('Found HTML files:', files);
+
+                for (const file of htmlFiles) {
+                    // 3. Fetch the content of each file to find the <title>
+                    const fileData = await fetch(file.download_url);
+                    const text = await fileData.text();
+                    
+                    // Match text between <title> tags
+                    const docTitle = text.match(/<title>(.*?)<\/title>/i)?.[1] || 'Untitled Tool';
+
+                    // 4. Create the list item
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <a href="${file.name}">${docTitle}</a>
+                        <span class="file-name">${file.name}</span>
+                    `;
+                    listElement.appendChild(li);
+                }
+                
+                loader.style.display = 'none';
+            } catch (error) {
+                loader.textContent = 'Error loading files. Check console or configuration.';
+                console.error(error);
+            }
+        }
+
+        fetchFiles();
+    </script>
+</body>
+</html>
