@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>QR Code Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- QR Code Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+
+<!-- Modern Styles -->
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  textarea {
+    width: 100%;
+    height: 80px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border 0.3s;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+    color: #fff;
+    background: #007bff;
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+  }
+
+  button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,123,255,0.4);
+  }
+
+  #preview {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  #preview svg {
+    width: 300px;
+    height: 300px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>QR Code Generator</h2>
+    <textarea id="qrText" placeholder="Enter text or URL"></textarea>
+    <div class="buttons">
+      <button onclick="generateQR()">Generate</button>
+      <button onclick="downloadSVG()">Download SVG</button>
+      <button onclick="downloadPNG()">Download PNG</button>
+    </div>
+    <div id="preview"></div>
+  </div>
+
+  <script>
+    let qr;
+
+    function generateQR() {
+      const text = document.getElementById("qrText").value.trim();
+      if (!text) { alert("Please enter text or URL."); return; }
+
+      qr = qrcode(0, 'Q'); // Automatic version, high error correction
+      qr.addData(text);
+      qr.make();
+
+      const svg = qr.createSvgTag({ scalable: true, cellSize: 10, margin: 10 });
+      const preview = document.getElementById("preview");
+      preview.innerHTML = svg;
+    }
+
+    function downloadSVG() {
+      if (!qr) { alert("Generate a QR code first."); return; }
+      const svgData = qr.createSvgTag({ scalable: true, cellSize: 10, margin: 4 });
+      const blob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = "qrcode-1000x1000.svg"; a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function downloadPNG() {
+      if (!qr) { alert("Generate a QR code first."); return; }
+      const canvas = document.createElement("canvas");
+      const size = 1000; canvas.width = size; canvas.height = size;
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, size, size);
+
+      const moduleCount = qr.getModuleCount();
+      const cellSize = size / moduleCount;
+
+      ctx.fillStyle = "#000";
+      for (let r=0;r<moduleCount;r++) {
+        for (let c=0;c<moduleCount;c++) {
+          if (qr.isDark(r,c)) ctx.fillRect(c*cellSize, r*cellSize, cellSize, cellSize);
+        }
+      }
+
+      const a = document.createElement("a");
+      a.href = canvas.toDataURL("image/png"); a.download = "qrcode-1000x1000.png"; a.click();
+    }
+  </script>
+
+</body>
+</html>
