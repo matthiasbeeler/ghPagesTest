@@ -1475,6 +1475,159 @@ table.overview .modus-label { font-weight: 700; writing-mode: vertical-rl; text-
   .si-table-mobile { display: none !important; }
   .si-table-desktop { display: block !important; }
 }
+
+/* ============================================================
+   GRAMMAR AI — fixed bottom-right FAB + panel
+   ============================================================ */
+
+/* FAB trigger button */
+#gram-ai-fab {
+  display: none;
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1199;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 20px;
+  border-radius: 980px;
+  border: none;
+  background: #1d1d1f;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+  transition: opacity 0.18s, transform 0.18s;
+  letter-spacing: -0.01em;
+}
+#gram-ai-fab.visible { display: inline-flex; }
+#gram-ai-fab:hover { opacity: 0.85; transform: translateY(-2px); }
+
+/* Floating panel — sits above the FAB */
+#gram-ai-panel {
+  display: none;
+  position: fixed;
+  bottom: 82px;
+  right: 28px;
+  z-index: 1200;
+  width: 360px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 20px 22px 22px;
+  max-height: 480px;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.20), 0 2px 8px rgba(0,0,0,0.10);
+  animation: gramAiSlideUp 0.24s cubic-bezier(0.34,1.4,0.64,1) both;
+}
+#gram-ai-panel.open { display: flex; }
+@keyframes gramAiSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+.gram-ai-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.gram-ai-modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+.gram-ai-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: color 0.15s;
+}
+.gram-ai-modal-close:hover { color: var(--text); }
+.gram-ai-question-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.gram-ai-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  font-size: 0.92rem;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.2s;
+  min-height: 44px;
+}
+.gram-ai-input:focus { border-color: var(--indicatif, #5856d6); }
+.gram-ai-send {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.18s;
+  white-space: nowrap;
+  min-height: 44px;
+  background: #1d1d1f;
+  color: #fff;
+}
+.gram-ai-send:hover { opacity: 0.82; }
+.gram-ai-send:disabled { opacity: 0.45; cursor: not-allowed; }
+.gram-ai-response {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.gram-ai-response p { margin-bottom: 10px; }
+.gram-ai-response p:last-child { margin-bottom: 0; }
+.gram-ai-response strong { font-weight: 700; }
+.gram-ai-response em { font-style: italic; color: var(--stem, #5856d6); }
+.gram-ai-no-key {
+  padding: 12px 16px;
+  background: #fef3c7;
+  border: 1px solid #f3d68b;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  color: #78590a;
+  font-weight: 600;
+}
+.gram-ai-error {
+  padding: 12px 16px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 12px;
+  color: #7f1d1d;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+@media (prefers-color-scheme: dark) {
+  #gram-ai-fab { background: #f5f5f7; color: #1d1d1f; }
+  .gram-ai-send { background: #f5f5f7; color: #1d1d1f; }
+  .gram-ai-no-key { background: #2c2210; border-color: #7a5504; color: #f0d88a; }
+  #gram-ai-panel { background: #1c1c1e; }
+}
+@media (max-width: 600px) {
+  #gram-ai-fab { bottom: 16px; right: 16px; }
+  #gram-ai-panel { bottom: 74px; right: 12px; left: 12px; width: auto; max-height: 58vh; }
+  .gram-ai-question-row { flex-direction: column; }
+  .gram-ai-input, .gram-ai-send { width: 100%; }
+}
 </style>
 </head>
 <body>
@@ -4196,6 +4349,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init on load
   progressUpdateBadges();
   errorsUpdateBadge();
+  gramAiInject();
 });
 
 // ============================================================
@@ -6090,6 +6244,153 @@ function showExportStatus(msg, isError) {
   el.textContent = msg; el.className = 'export-status' + (isError ? ' error' : '');
   el.style.display = 'block';
   setTimeout(() => { el.style.display = 'none'; }, 4000);
+}
+
+// ============================================================
+// GRAMMAR AI — fixed FAB + floating panel (bottom-right corner)
+// ============================================================
+
+function gramAiInject() {
+  // FAB button
+  const fab = document.createElement('button');
+  fab.id = 'gram-ai-fab';
+  fab.innerHTML = '✦ KI fragen';
+  fab.setAttribute('aria-label', 'KI fragen');
+  fab.addEventListener('click', () => gramAiPanelToggle());
+  document.body.appendChild(fab);
+
+  // Floating panel
+  const panel = document.createElement('div');
+  panel.id = 'gram-ai-panel';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-modal', 'true');
+  panel.innerHTML = `
+    <div class="gram-ai-modal-header">
+      <p class="gram-ai-modal-title" id="gram-ai-modal-title">KI fragen</p>
+      <button class="gram-ai-modal-close" onclick="gramAiModalClose()" aria-label="Schließen">✕</button>
+    </div>
+    <div id="gram-ai-modal-body"></div>`;
+  document.body.appendChild(panel);
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') gramAiModalClose(); });
+
+  // Show FAB only on Grammar tab
+  const observer = new MutationObserver(() => {
+    const onGrammar = document.getElementById('main-panel-grammatik')?.style.display !== 'none';
+    fab.classList.toggle('visible', onGrammar);
+    if (!onGrammar) gramAiModalClose();
+  });
+  const gramPanel = document.getElementById('main-panel-grammatik');
+  if (gramPanel) observer.observe(gramPanel, { attributes: true, attributeFilter: ['style'] });
+  // Check initial state
+  const onGrammarNow = gramPanel?.style.display !== 'none';
+  if (onGrammarNow) fab.classList.add('visible');
+}
+
+function gramAiPanelToggle() {
+  const panel = document.getElementById('gram-ai-panel');
+  if (!panel) return;
+  if (panel.classList.contains('open')) { gramAiModalClose(); return; }
+  // Detect currently open tense card
+  const openCard = document.querySelector('#main-panel-grammatik .tense-card.open');
+  const tenseName = openCard?.querySelector('.tense-header h3')?.textContent.trim() ?? '';
+  const modusName = openCard?.closest('.gram-panel')?.id ?? '';
+  gramAiModalOpen(tenseName || 'Grammatik', modusName);
+}
+
+function gramAiModalOpen(tenseName, modusName) {
+  const panel = document.getElementById('gram-ai-panel');
+  const title = document.getElementById('gram-ai-modal-title');
+  const body  = document.getElementById('gram-ai-modal-body');
+  if (!panel || !body) return;
+  title.textContent = tenseName || 'KI fragen';
+  const key = sessionStorage.getItem('mistral_key');
+  if (!key) {
+    body.innerHTML = `<div class="gram-ai-no-key">Kein API-Schlüssel hinterlegt. Gehe zum Tab <strong>Lernen</strong> und gib deinen Mistral-Schlüssel ein.</div>`;
+  } else {
+    body.innerHTML = `
+      <div class="gram-ai-question-row">
+        <input class="gram-ai-input" id="gram-ai-modal-input" type="text"
+          placeholder="${tenseName ? 'Z.B. Wann benutze ich ' + tenseName + '?' : 'Frage zur Grammatik…'}" autocomplete="off" spellcheck="false">
+        <button class="gram-ai-send" id="gram-ai-modal-send">Fragen ›</button>
+      </div>
+      <div class="gram-ai-response" id="gram-ai-modal-resp" style="display:none;"></div>`;
+    const input = document.getElementById('gram-ai-modal-input');
+    const send  = document.getElementById('gram-ai-modal-send');
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); gramAiAskModal(tenseName, modusName); }
+    });
+    send.addEventListener('click', () => gramAiAskModal(tenseName, modusName));
+    setTimeout(() => input.focus(), 80);
+  }
+  panel.classList.add('open');
+}
+
+function gramAiModalClose() {
+  document.getElementById('gram-ai-panel')?.classList.remove('open');
+}
+
+async function gramAiAskModal(tenseName, modusName) {
+  const input  = document.getElementById('gram-ai-modal-input');
+  const send   = document.getElementById('gram-ai-modal-send');
+  const respEl = document.getElementById('gram-ai-modal-resp');
+  const question = input ? input.value.trim() : '';
+  if (!question) { if (input) input.focus(); return; }
+  const key = sessionStorage.getItem('mistral_key');
+  if (!key) return;
+
+  input.disabled = true;
+  send.disabled  = true;
+  respEl.style.display = 'block';
+  respEl.innerHTML = `<div style="display:flex;align-items:center;gap:10px;color:var(--text-secondary);font-size:0.9rem;"><div class="training-spinner"></div> Antwort wird geladen…</div>`;
+
+  try {
+    const resp = await fetch('https://api.mistral.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${key}` },
+      body: JSON.stringify({
+        model: 'mistral-small-latest',
+        messages: [{ role: 'user', content: gramAiPrompt(question, tenseName, modusName) }],
+        temperature: 0.4,
+        max_tokens: 600,
+      })
+    });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    const answer = data.choices[0].message.content.trim();
+    respEl.innerHTML = gramAiRenderText(answer);
+  } catch(e) {
+    respEl.innerHTML = `<div class="gram-ai-error">Fehler: ${e.message}. Bitte erneut versuchen.</div>`;
+  } finally {
+    input.disabled = false;
+    send.disabled  = false;
+    input.value = '';
+    input.focus();
+  }
+}
+
+function gramAiPrompt(question, tenseName, modusName) {
+  return `Du bist ein Französischlehrer für deutsche Lernende.
+Der Benutzer lernt gerade die Zeitform "${tenseName}"${modusName ? ` (Modus: ${modusName})` : ''} im Französischen.
+
+Beantworte die folgende Frage auf Deutsch. Verwende dabei:
+– Kurze, klare Erklärungen auf Deutsch
+– Französische Beispielsätze kursiv, mit deutscher Übersetzung in Klammern
+– Maximal 4–5 kurze Absätze
+– Keine Markdown-Überschriften mit #, keine Sternchen-Listen
+
+Frage: ${question}`;
+}
+
+function gramAiRenderText(text) {
+  const esc = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return esc
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*\n]+?)\*/g, '<em>$1</em>')
+    .replace(/_([^_\n]+?)_/g, '<em>$1</em>')
+    .split(/\n{2,}/)
+    .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+    .join('');
 }
 
 // ============================================================
