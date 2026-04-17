@@ -90,6 +90,216 @@ nav a.nav-imperatif { background: var(--imperatif); }
 nav a.nav-infinitif { background: var(--infinitif); }
 nav a.nav-participe { background: var(--participe); }
 nav a.nav-gerondif { background: var(--gerondif); }
+nav a.nav-training { background: #6d28d9; }
+
+/* TRAINING TAB */
+.training-key-panel {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+.training-key-panel h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; color: #4c1d95; }
+.training-key-panel p { font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5; }
+.training-key-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  font-size: 0.95rem;
+  font-family: 'SF Mono', 'Menlo', monospace;
+  background: var(--bg);
+  color: var(--text);
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.training-key-input:focus { border-color: #6d28d9; }
+.training-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 22px;
+  border-radius: 980px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: -0.01em;
+}
+.training-btn-primary { background: #6d28d9; color: #fff; }
+.training-btn-primary:hover { background: #5b21b6; transform: scale(1.03); }
+.training-btn-primary:disabled { background: #a78bfa; cursor: not-allowed; transform: none; }
+.training-btn-secondary { background: var(--bg); color: var(--text-secondary); font-weight: 600; }
+.training-btn-secondary:hover { background: var(--border); color: var(--text); }
+.training-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+.training-select-group { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 140px; }
+.training-select-group label { font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); letter-spacing: -0.01em; }
+.training-select {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  font-size: 0.9rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2348484a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+.training-select:focus { border-color: #6d28d9; }
+.training-exercise-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.training-exercise-header {
+  padding: 18px 24px 14px;
+  border-bottom: 1px solid var(--bg);
+}
+.training-exercise-header .exercise-type-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 980px;
+  background: #ddd6fe;
+  color: #3b0764;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.training-exercise-header .exercise-question {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+}
+.training-exercise-header .exercise-sentence {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--stem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.training-exercise-body { padding: 20px 24px; }
+.training-answer-input {
+  width: 100%;
+  max-width: 360px;
+  padding: 11px 16px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--text);
+  margin-bottom: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.training-answer-input:focus { border-color: #6d28d9; }
+.training-answer-input.correct { border-color: #15803d; background: #dcfce7; color: #14532d; }
+.training-answer-input.wrong { border-color: #b91c1c; background: #fee2e2; color: #7f1d1d; }
+.training-options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.training-option {
+  padding: 9px 18px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
+}
+.training-option:hover { border-color: #5b21b6; background: #ede9fe; color: #4c1d95; }
+.training-option.selected { border-color: #5b21b6; background: #ede9fe; color: #4c1d95; font-weight: 700; }
+.training-option.correct { border-color: #15803d; background: #dcfce7; color: #14532d; font-weight: 700; }
+.training-option.wrong { border-color: #b91c1c; background: #fee2e2; color: #7f1d1d; }
+.training-feedback {
+  margin-top: 14px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  display: none;
+}
+.training-feedback.correct { background: #dcfce7; border: 1px solid #86efac; color: #14532d; }
+.training-feedback.wrong { background: #fee2e2; border: 1px solid #fca5a5; color: #7f1d1d; }
+.training-footer { padding: 16px 24px; display: flex; gap: 10px; align-items: center; border-top: 1px solid var(--bg); flex-wrap: wrap; }
+.training-spinner {
+  display: inline-block;
+  width: 20px; height: 20px;
+  border: 2.5px solid #ede9fe;
+  border-top-color: #6d28d9;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.training-error {
+  padding: 12px 16px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 12px;
+  color: #7f1d1d;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+.training-key-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background: #ede9fe;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  color: #3b0764;
+  font-weight: 600;
+}
+.training-key-bar button {
+  margin-left: auto;
+  border: none;
+  background: none;
+  color: #4c1d95;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: underline;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .training-controls { flex-direction: column; }
+  .training-select-group { min-width: 0; width: 100%; }
+  .training-exercise-header { padding: 16px 16px 12px; }
+  .training-exercise-body { padding: 16px; }
+  .training-footer { padding: 12px 16px; }
+}
 
 /* HERO */
 .hero {
@@ -792,6 +1002,7 @@ table.overview .modus-label { font-weight: 700; writing-mode: vertical-rl; text-
   <button class="tab-btn" data-tab="infinitif" style="color: var(--infinitif);">♾️ Infinitif</button>
   <button class="tab-btn" data-tab="participe" style="color: var(--participe);">🔗 Participe</button>
   <button class="tab-btn" data-tab="gerondif" style="color: var(--gerondif);">⚡ Gérondif</button>
+  <button class="tab-btn" data-tab="training" style="color: #6d28d9;">🧠 Training</button>
 </div>
 <div class="tab-content-area">
 
@@ -2216,6 +2427,97 @@ table.overview .modus-label { font-weight: 700; writing-mode: vertical-rl; text-
 <!-- ============================================================ -->
 <!-- ÜBERSICHTSTABELLE -->
 <!-- ============================================================ -->
+<!-- ============================================================ -->
+<!-- TRAINING -->
+<!-- ============================================================ -->
+<section class="modus-section tab-panel" id="training" data-tab="training">
+  <div class="modus-header" style="background: #3b0764; border: 2px solid #6d28d9;">
+    <h2 style="color: #f5f3ff;">🧠 KI-Training
+      <span class="badge-de" style="color: #3b0764; background: #ddd6fe;">Übungsaufgaben</span>
+    </h2>
+    <p style="color: #e9d5ff;">Der KI-Trainer generiert einzigartige Übungsaufgaben für jeden Modus und jede Zeit. Gib deinen Mistral API-Schlüssel ein – er wird nur im Browser (sessionStorage) gespeichert und ist nach dem Schließen des Tabs weg.</p>
+  </div>
+
+  <!-- API KEY BAR (shown when key is set) -->
+  <div id="training-key-bar" class="training-key-bar" style="display:none;">
+    🔑 API-Schlüssel gespeichert
+    <button onclick="trainingClearKey()">Schlüssel ändern</button>
+  </div>
+
+  <!-- API KEY PANEL (shown when no key) -->
+  <div id="training-key-panel" class="training-key-panel">
+    <h3>🔑 Mistral API-Schlüssel</h3>
+    <p>Trage deinen <strong>Mistral AI</strong> API-Schlüssel ein. Du erhältst ihn unter <strong>console.mistral.ai</strong>. Der Schlüssel wird nur lokal in deinem Browser für diese Session gespeichert.</p>
+    <input type="password" id="training-key-input" class="training-key-input" placeholder="sk-..." autocomplete="off" />
+    <br>
+    <button class="training-btn training-btn-primary" onclick="trainingSaveKey()">Schlüssel speichern</button>
+  </div>
+
+  <!-- GENERATOR (shown when key is set) -->
+  <div id="training-generator" style="display:none;">
+    <div class="training-controls">
+      <div class="training-select-group">
+        <label for="sel-modus">Modus</label>
+        <select id="sel-modus" class="training-select" onchange="trainingUpdateTemps()">
+          <option value="">Alle Modi</option>
+          <option value="Indicatif">📊 Indicatif</option>
+          <option value="Subjonctif">🌀 Subjonctif</option>
+          <option value="Conditionnel">🔀 Conditionnel</option>
+          <option value="Impératif">👉 Impératif</option>
+          <option value="Infinitif">♾️ Infinitif</option>
+          <option value="Participe">🔗 Participe</option>
+          <option value="Gérondif">⚡ Gérondif</option>
+        </select>
+      </div>
+      <div class="training-select-group">
+        <label for="sel-temps">Zeit / Unterform</label>
+        <select id="sel-temps" class="training-select">
+          <option value="">Alle Zeiten</option>
+        </select>
+      </div>
+      <div class="training-select-group">
+        <label for="sel-type">Übungstyp</label>
+        <select id="sel-type" class="training-select">
+          <option value="Lückentext">Lückentext (Verb einsetzen)</option>
+          <option value="Multiple Choice">Multiple Choice (Form wählen)</option>
+          <option value="Zeit bestimmen">Zeit bestimmen (Modus/Zeit erkennen)</option>
+        </select>
+      </div>
+    </div>
+    <button class="training-btn training-btn-primary" id="training-gen-btn" onclick="trainingGenerate()" style="width:100%; justify-content:center; font-size:1rem; padding:13px 22px; border-radius:14px; margin-bottom:20px;">▶ Neue Aufgabe generieren</button>
+
+    <!-- Error message -->
+    <div id="training-error" class="training-error" style="display:none;"></div>
+
+    <!-- Loading -->
+    <div id="training-loading" style="display:none; text-align:center; padding: 32px; color: var(--text-secondary); font-size: 0.95rem;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;">
+        <div class="training-spinner"></div>
+        KI generiert Aufgabe…
+      </div>
+    </div>
+
+    <!-- Exercise card -->
+    <div id="training-card" class="training-exercise-card" style="display:none;">
+      <div class="training-exercise-header">
+        <span class="exercise-type-badge" id="ex-badge"></span>
+        <div class="exercise-question" id="ex-question"></div>
+        <div class="exercise-sentence" id="ex-sentence"></div>
+      </div>
+      <div class="training-exercise-body">
+        <div id="ex-input-area"></div>
+        <div id="training-feedback" class="training-feedback"></div>
+      </div>
+      <div class="training-footer">
+        <button class="training-btn training-btn-primary" id="ex-check-btn" onclick="trainingCheck()">Antwort prüfen ✓</button>
+        <button class="training-btn training-btn-secondary" onclick="trainingGenerate()" id="ex-next-btn" style="display:none;">Nächste Aufgabe →</button>
+        <button class="training-btn training-btn-secondary" id="ex-explain-btn" onclick="trainingExplain()" style="display:none; margin-left:auto;">🔍 Satz erklären</button>
+      </div>
+      <div id="training-explanation" style="display:none; padding: 0 24px 20px;"></div>
+    </div>
+  </div>
+</section>
+
 </div><!-- /tab-content-area -->
 
 <div class="footer-overview" id="uebersicht">
@@ -2568,6 +2870,8 @@ document.querySelectorAll('.modi-card').forEach(card => {
 
 // "Alle öffnen/schließen" button per section
 document.querySelectorAll('.modus-header').forEach(header => {
+  // Skip training section header
+  if (header.closest('#training')) return;
   const btn = document.createElement('button');
   btn.textContent = 'Alle aufklappen ▼';
   btn.style.cssText = 'margin-top:12px;padding:8px 18px;border-radius:980px;border:none;background:rgba(0,0,0,0.06);color:inherit;font-weight:600;font-size:0.82rem;cursor:pointer;letter-spacing:-0.01em;transition:background 0.2s;';
@@ -2582,6 +2886,319 @@ document.querySelectorAll('.modus-header').forEach(header => {
     btn.textContent = allOpen ? 'Alle aufklappen ▼' : 'Alle zuklappen ▲';
   });
   header.appendChild(btn);
+});
+// ============================================================
+// TRAINING MODULE
+// ============================================================
+
+const TRAINING_TEMPS = {
+  'Indicatif': ['Présent', 'Imparfait', 'Passé composé', 'Passé simple', 'Plus-que-parfait', 'Futur simple', 'Futur antérieur', 'Futur proche', 'Passé récent'],
+  'Subjonctif': ['Subjonctif présent', 'Subjonctif passé', 'Subjonctif imparfait', 'Subjonctif plus-que-parfait'],
+  'Conditionnel': ['Conditionnel présent', 'Conditionnel passé'],
+  'Impératif': ['Impératif présent', 'Impératif passé'],
+  'Infinitif': ['Infinitif présent', 'Infinitif passé'],
+  'Participe': ['Participe présent', 'Participe passé'],
+  'Gérondif': ['Gérondif présent', 'Gérondif passé'],
+};
+
+let trainingCurrentExercise = null;
+
+function trainingInit() {
+  const key = sessionStorage.getItem('mistral_key');
+  if (key) {
+    document.getElementById('training-key-panel').style.display = 'none';
+    document.getElementById('training-key-bar').style.display = 'flex';
+    document.getElementById('training-generator').style.display = 'block';
+  } else {
+    document.getElementById('training-key-panel').style.display = 'block';
+    document.getElementById('training-key-bar').style.display = 'none';
+    document.getElementById('training-generator').style.display = 'none';
+  }
+}
+
+function trainingSaveKey() {
+  const val = document.getElementById('training-key-input').value.trim();
+  if (!val) return;
+  sessionStorage.setItem('mistral_key', val);
+  trainingInit();
+}
+
+function trainingClearKey() {
+  sessionStorage.removeItem('mistral_key');
+  document.getElementById('training-key-input').value = '';
+  trainingInit();
+  document.getElementById('training-card').style.display = 'none';
+  document.getElementById('training-error').style.display = 'none';
+}
+
+function trainingUpdateTemps() {
+  const modus = document.getElementById('sel-modus').value;
+  const sel = document.getElementById('sel-temps');
+  sel.innerHTML = '<option value="">Alle Zeiten</option>';
+  if (modus && TRAINING_TEMPS[modus]) {
+    TRAINING_TEMPS[modus].forEach(t => {
+      const o = document.createElement('option');
+      o.value = t;
+      o.textContent = t;
+      sel.appendChild(o);
+    });
+  }
+}
+
+async function trainingGenerate() {
+  const key = sessionStorage.getItem('mistral_key');
+  if (!key) return;
+
+  const modus = document.getElementById('sel-modus').value;
+  const temps = document.getElementById('sel-temps').value;
+  const type = document.getElementById('sel-type').value;
+
+  let topic = 'alle französischen Verbmodi und Zeiten';
+  if (modus && temps) topic = `${modus} – ${temps}`;
+  else if (modus) topic = modus;
+
+  const typePrompts = {
+    'Lückentext': 'Fill-in-the-blank: Einen Satz auf Französisch mit einer Lücke (___), wo das Verb in der richtigen Form eingesetzt werden muss. Gib einen Hinweis welches Verb (Infinitiv) verwendet werden soll.',
+    'Multiple Choice': 'Multiple choice mit 4 Optionen (A, B, C, D): Einen Satz mit dem falschen oder fehlenden Verb, 4 Optionen zur Auswahl.',
+    'Zeit bestimmen': 'Identify the tense: Einen vollständigen französischen Satz, bei dem der Lernende den Modus und die Zeit bestimmen soll.',
+  };
+
+  const systemPrompt = `Du bist ein Französischlehrer. Generiere EINE Übungsaufgabe vom Typ "${type}" zum Thema "${topic}".
+Antworte NUR mit gültigem JSON ohne Markdown-Codeblock. Das JSON-Schema:
+{
+  "question": "Aufgabenstellung auf Deutsch",
+  "sentence": "Französischer Satz (bei Lückentext mit ___ für die Lücke; bei Zeit bestimmen der vollständige Satz; bei Multiple Choice der Satz ohne korrekte Form)",
+  "verb_hint": "Nur bei Lückentext: Infinitivform des einzusetzenden Verbs (sonst leer)",
+  "options": ["A: ...", "B: ...", "C: ...", "D: ..."],
+  "answer": "Korrekte Antwort (bei Multiple Choice: 'A: ...' exakt wie in options)",
+  "explanation": "Kurze Erklärung auf Deutsch warum diese Antwort korrekt ist"
+}
+Für Lückentext: options = []
+Für Zeit bestimmen: options = [], answer = "Modus + Zeit" z.B. "Indicatif – Passé composé"`;
+
+  // Show loading
+  document.getElementById('training-loading').style.display = 'block';
+  document.getElementById('training-card').style.display = 'none';
+  document.getElementById('training-error').style.display = 'none';
+  document.getElementById('training-gen-btn').disabled = true;
+
+  try {
+    const resp = await fetch('https://api.mistral.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${key}` },
+      body: JSON.stringify({
+        model: 'mistral-small-latest',
+        messages: [{ role: 'user', content: systemPrompt }],
+        temperature: 0.9,
+        max_tokens: 512,
+      })
+    });
+
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err.message || `HTTP ${resp.status}`);
+    }
+
+    const data = await resp.json();
+    const raw = data.choices[0].message.content.trim();
+    // Strip possible markdown fences
+    const jsonStr = raw.replace(/^```json?\s*/i, '').replace(/\s*```$/i, '').trim();
+    const ex = JSON.parse(jsonStr);
+    trainingCurrentExercise = ex;
+    trainingRender(ex, type);
+  } catch (e) {
+    document.getElementById('training-error').textContent = `Fehler: ${e.message}`;
+    document.getElementById('training-error').style.display = 'block';
+  } finally {
+    document.getElementById('training-loading').style.display = 'none';
+    document.getElementById('training-gen-btn').disabled = false;
+  }
+}
+
+function trainingRender(ex, type) {
+  document.getElementById('ex-badge').textContent = type;
+  document.getElementById('ex-question').textContent = ex.question;
+
+  const sentenceEl = document.getElementById('ex-sentence');
+  if (ex.sentence) {
+    let display = ex.sentence;
+    if (ex.verb_hint) display += `  [Verb: ${ex.verb_hint}]`;
+    sentenceEl.textContent = display;
+    sentenceEl.style.display = 'block';
+  } else {
+    sentenceEl.style.display = 'none';
+  }
+
+  const inputArea = document.getElementById('ex-input-area');
+  inputArea.innerHTML = '';
+
+  if (ex.options && ex.options.length > 0) {
+    // Multiple choice
+    const grid = document.createElement('div');
+    grid.className = 'training-options-grid';
+    ex.options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'training-option';
+      btn.textContent = opt;
+      btn.onclick = () => {
+        grid.querySelectorAll('.training-option').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      };
+      grid.appendChild(btn);
+    });
+    inputArea.appendChild(grid);
+  } else {
+    // Text input
+    const inp = document.createElement('input');
+    inp.type = 'text';
+    inp.className = 'training-answer-input';
+    inp.placeholder = type === 'Zeit bestimmen' ? 'z.B. Indicatif – Passé composé' : 'Antwort eingeben…';
+    inp.id = 'ex-text-input';
+    inp.onkeydown = e => { if (e.key === 'Enter') trainingCheck(); };
+    inputArea.appendChild(inp);
+    setTimeout(() => inp.focus(), 50);
+  }
+
+  const fb = document.getElementById('training-feedback');
+  fb.style.display = 'none';
+  fb.className = 'training-feedback';
+
+  document.getElementById('ex-check-btn').style.display = 'inline-flex';
+  document.getElementById('ex-next-btn').style.display = 'none';
+  document.getElementById('ex-explain-btn').style.display = ex.sentence ? 'inline-flex' : 'none';
+  document.getElementById('training-explanation').style.display = 'none';
+  document.getElementById('training-explanation').innerHTML = '';
+  document.getElementById('training-card').style.display = 'block';
+}
+
+function trainingCheck() {
+  const ex = trainingCurrentExercise;
+  if (!ex) return;
+
+  let userAnswer = '';
+  const inputArea = document.getElementById('ex-input-area');
+  const selected = inputArea.querySelector('.training-option.selected');
+  const textInput = document.getElementById('ex-text-input');
+
+  if (selected) {
+    userAnswer = selected.textContent.trim();
+  } else if (textInput) {
+    userAnswer = textInput.value.trim();
+  }
+
+  if (!userAnswer) return;
+
+  const correct = ex.answer.trim();
+  const isCorrect = userAnswer.toLowerCase() === correct.toLowerCase();
+
+  const fb = document.getElementById('training-feedback');
+  fb.className = 'training-feedback ' + (isCorrect ? 'correct' : 'wrong');
+  fb.innerHTML = isCorrect
+    ? `✅ <strong>Richtig!</strong> ${ex.explanation}`
+    : `❌ <strong>Falsch.</strong> Richtige Antwort: <strong>${correct}</strong><br>${ex.explanation}`;
+  fb.style.display = 'block';
+
+  // Style options/input
+  if (selected) {
+    const grid = inputArea.querySelector('.training-options-grid');
+    grid.querySelectorAll('.training-option').forEach(btn => {
+      if (btn.textContent.trim().toLowerCase() === correct.toLowerCase()) btn.classList.add('correct');
+      else if (btn.classList.contains('selected')) btn.classList.add('wrong');
+      btn.onclick = null;
+    });
+  } else if (textInput) {
+    textInput.classList.add(isCorrect ? 'correct' : 'wrong');
+    textInput.readOnly = true;
+  }
+
+  document.getElementById('ex-check-btn').style.display = 'none';
+  document.getElementById('ex-next-btn').style.display = 'inline-flex';
+}
+
+async function trainingExplain() {
+  const ex = trainingCurrentExercise;
+  if (!ex || !ex.sentence) return;
+  const key = sessionStorage.getItem('mistral_key');
+  if (!key) return;
+
+  const btn = document.getElementById('ex-explain-btn');
+  const panel = document.getElementById('training-explanation');
+
+  // Toggle off if already shown
+  if (panel.style.display !== 'none' && panel.innerHTML) {
+    panel.style.display = 'none';
+    btn.textContent = '🔍 Satz erklären';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '…';
+  panel.style.display = 'block';
+  panel.innerHTML = '<div style="display:flex;align-items:center;gap:10px;color:var(--text-secondary);font-size:0.9rem;"><div class="training-spinner"></div> Wort-für-Wort-Erklärung wird geladen…</div>';
+
+  // The sentence without the verb hint suffix we appended visually
+  const sentence = ex.sentence.replace(/___/g, '___');
+
+  const prompt = `Erkläre den folgenden französischen Satz Wort für Wort auf Deutsch.
+Satz: "${sentence}"
+Antworte NUR mit gültigem JSON ohne Markdown-Codeblock:
+{
+  "words": [
+    { "word": "französisches Wort", "type": "Wortart (z.B. Verb, Nomen, Adjektiv, Pronomen, Präposition, Artikel, Adverb, Konjunktion)", "meaning": "deutsche Bedeutung", "note": "optionale Grammatiknotiz (z.B. '3. Person Sg. Passé composé von avoir', leer wenn nicht nötig)" }
+  ],
+  "translation": "vollständige deutsche Übersetzung des Satzes"
+}`;
+
+  try {
+    const resp = await fetch('https://api.mistral.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${key}` },
+      body: JSON.stringify({
+        model: 'mistral-small-latest',
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.2,
+        max_tokens: 800,
+      })
+    });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    const raw = data.choices[0].message.content.trim().replace(/^```json?\s*/i,'').replace(/\s*```$/i,'').trim();
+    const result = JSON.parse(raw);
+
+    let html = '<div style="border-top:1px solid var(--bg); padding-top:4px;">';
+    html += '<div style="font-size:0.78rem;font-weight:700;color:var(--text-secondary);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:12px;">Wort-für-Wort-Erklärung</div>';
+    html += '<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">';
+    result.words.forEach(w => {
+      html += `<div style="background:var(--bg);border-radius:10px;padding:8px 12px;font-size:0.88rem;min-width:80px;">
+        <div style="font-weight:700;color:var(--stem);font-style:italic;">${w.word}</div>
+        <div style="font-size:0.75rem;color:var(--text-secondary);font-weight:600;margin-top:1px;">${w.type}</div>
+        <div style="color:var(--text);margin-top:3px;">${w.meaning}</div>
+        ${w.note ? `<div style="font-size:0.75rem;color:#8b5cf6;margin-top:3px;font-style:italic;">${w.note}</div>` : ''}
+      </div>`;
+    });
+    html += '</div>';
+    html += `<div style="background:#ede9fe;border-radius:10px;padding:10px 14px;font-size:0.92rem;color:#3b0764;font-weight:500;">🇩🇪 <strong>Übersetzung:</strong> ${result.translation}</div>`;
+    html += '</div>';
+    panel.innerHTML = html;
+    btn.textContent = '🔍 Erklärung schließen';
+  } catch(e) {
+    panel.innerHTML = `<div class="training-error">Fehler: ${e.message}</div>`;
+    btn.textContent = '🔍 Satz erklären';
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// Initialize training when tab is first activated
+document.querySelector('.tab-btn[data-tab="training"]').addEventListener('click', () => {
+  trainingInit();
+  trainingUpdateTemps();
+});
+
+// Allow pressing Enter in key input
+document.addEventListener('DOMContentLoaded', () => {
+  const ki = document.getElementById('training-key-input');
+  if (ki) ki.addEventListener('keydown', e => { if (e.key === 'Enter') trainingSaveKey(); });
 });
 </script>
 </body>
