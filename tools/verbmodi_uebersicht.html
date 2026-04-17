@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Französische Verbmodi & Zeiten – Vollständige Lernübersicht</title>
+<style>
+:root {
+  --indicatif: #0051a8;
+  --indicatif-bg: #f0f5ff;
+  --indicatif-light: #d6e8ff;
+  --subjonctif: #6a2ab8;
+  --subjonctif-bg: #f6f1ff;
+  --subjonctif-light: #e0d0f9;
+  --conditionnel: #b33d0c;
+  --conditionnel-bg: #fff6f0;
+  --conditionnel-light: #fdd7c0;
+  --imperatif: #a51616;
+  --imperatif-bg: #fff3f3;
+  --imperatif-light: #fdd;
+  --infinitif: #0e6b44;
+  --infinitif-bg: #eef9f3;
+  --infinitif-light: #bce8d0;
+  --participe: #066080;
+  --participe-bg: #eef8fc;
+  --participe-light: #bbe5f2;
+  --gerondif: #7a5504;
+  --gerondif-bg: #fef9ec;
+  --gerondif-light: #f5dfa0;
+  --text: #1d1d1f;
+  --text-secondary: #48484a;
+  --bg: #f5f5f7;
+  --white: #ffffff;
+  --border: #d2d2d7;
+  --ending: #a02020;
+  --stem: #163d80;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.1);
+  --card-shadow-hover: 0 8px 30px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.12);
+  --radius: 18px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(245,245,247,0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0.5px solid rgba(0,0,0,0.12);
+  padding: 8px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+nav .nav-inner {
+  display: flex;
+  gap: 6px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-width: max-content;
+}
+nav a {
+  text-decoration: none;
+  padding: 7px 16px;
+  border-radius: 980px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  color: white;
+}
+nav a:hover { opacity: 0.85; transform: scale(1.04); }
+nav a.nav-indicatif { background: var(--indicatif); }
+nav a.nav-subjonctif { background: var(--subjonctif); }
+nav a.nav-conditionnel { background: var(--conditionnel); }
+nav a.nav-imperatif { background: var(--imperatif); }
+nav a.nav-infinitif { background: var(--infinitif); }
+nav a.nav-participe { background: var(--participe); }
+nav a.nav-gerondif { background: var(--gerondif); }
+
+/* HERO */
+.hero {
+  background: #1d1d1f;
+  color: #f5f5f7;
+  padding: 56px 24px 48px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #f5f5f7 0%, #a1a1a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #a1a1a6;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* MODI-KACHELN */
+.modi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.modi-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px;
+  padding: 16px 12px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: #f5f5f7;
+}
+.modi-card:hover { background: rgba(255,255,255,0.16); transform: translateY(-3px); }
+.modi-card .modi-icon { font-size: 1.6rem; display: block; margin-bottom: 4px; }
+.modi-card .modi-name { font-weight: 700; font-size: 0.95rem; display: block; letter-spacing: -0.01em; }
+.modi-card .modi-de { font-size: 0.78rem; color: #a1a1a6; display: block; margin-top: 2px; }
+
+/* CONTAINER */
+.container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* MODUS SECTION */
+.modus-section { padding: 8px 0 8px; }
+.modus-header {
+  padding: 28px 28px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.modus-header h2 {
+  font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.modus-header .badge-de {
+  font-size: 0.85rem;
+  background: rgba(255,255,255,0.8);
+  padding: 3px 12px;
+  border-radius: 980px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.modus-header p { font-size: 1rem; line-height: 1.55; max-width: 740px; color: var(--text); }
+
+/* TENSE CARD */
+.tense-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  border: none;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.tense-card:hover { box-shadow: var(--card-shadow-hover); }
+.tense-card.everyday { border-left: 4px solid #d97706; }
+.tense-card.everyday .tense-header::after {
+  content: '⭐ Alltag';
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 2px 8px;
+  border-radius: 980px;
+  margin-left: auto;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.tense-header {
+  padding: 18px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background 0.15s ease;
+}
+.tense-header:active { background: rgba(0,0,0,0.02); }
+.tense-header h3 { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; }
+.tense-header .tense-de { color: var(--text-secondary); font-size: 0.88rem; font-weight: 400; }
+.tense-header .chevron {
+  font-size: 1.1rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg);
+}
+.tense-card.open .chevron { transform: rotate(180deg); }
+.tense-body {
+  display: none;
+  padding: 0 24px 24px;
+}
+.tense-card.open .tense-body { display: block; }
+
+/* BESCHREIBUNG */
+.desc-box {
+  background: var(--bg);
+  border-left: 3px solid;
+  padding: 16px 20px;
+  border-radius: 0 14px 14px 0;
+  margin-bottom: 20px;
+  font-size: 0.98rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* VERWENDUNG CHIPS */
+.usage-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.chip {
+  padding: 5px 13px;
+  border-radius: 980px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* BILDUNGSREGEL */
+.formation-box {
+  background: var(--bg);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+.formation-box h4 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
+.formula {
+  font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 1rem;
+  background: var(--white);
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: inline-block;
+  margin: 5px 0;
+}
+.formula .stem { color: var(--stem); font-weight: 700; }
+.formula .ending { color: var(--ending); font-weight: 700; }
+.formula .plus { color: var(--text-secondary); margin: 0 5px; }
+
+/* KONJUGATIONSTABELLE */
+.conj-tables { margin-bottom: 20px; }
+.conj-tables h4 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
+.conj-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; border: 1px solid var(--border); }
+table.conj {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+table.conj th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+}
+table.conj td {
+  padding: 8px 14px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.06);
+}
+table.conj tr:last-child td { border-bottom: none; }
+table.conj tr:hover td { background: rgba(0,113,227,0.03); }
+table.conj .person { color: var(--text-secondary); font-weight: 600; white-space: nowrap; width: 56px; }
+table.conj .e { color: var(--ending); font-weight: 700; }
+table.conj thead th { font-size: 0.85rem; }
+
+/* BEISPIELE */
+.examples { margin-bottom: 16px; }
+.examples h4 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
+.example-item {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 8px;
+}
+.example-fr {
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--stem);
+  margin-bottom: 3px;
+  letter-spacing: -0.01em;
+}
+.example-de { color: var(--text-secondary); font-size: 0.92rem; }
+
+/* TIPP */
+.tipp-box {
+  background: #fffbeb;
+  border: 1px solid #f3d68b;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #78590a;
+}
+.tipp-box::before { content: "💡 "; font-size: 1rem; }
+.tipp-box strong { color: #5c4306; }
+
+/* TIMELINE */
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 16px auto 24px;
+  max-width: 860px;
+  overflow-x: auto;
+  padding: 10px;
+}
+.timeline-segment {
+  text-align: center;
+  padding: 6px 10px;
+  position: relative;
+  flex: 1;
+  min-width: 80px;
+}
+.timeline-segment .tl-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--indicatif);
+  display: block;
+  margin-bottom: 3px;
+  letter-spacing: -0.02em;
+}
+.timeline-segment .tl-name {
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  display: block;
+}
+.timeline-line {
+  height: 3px;
+  background: var(--indicatif);
+  flex: 0 0 16px;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--indicatif);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.timeline-now {
+  background: #e33;
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px #e33, 0 0 10px rgba(227,51,51,0.3);
+}
+
+/* FOOTER OVERVIEW TABLE */
+.footer-overview {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  margin: 32px auto;
+  max-width: 1120px;
+  box-shadow: var(--card-shadow);
+}
+.footer-overview h2 { text-align: center; margin-bottom: 20px; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.025em; }
+.overview-scroll { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+table.overview {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+table.overview th, table.overview td {
+  padding: 10px 14px;
+  border: 0.5px solid rgba(0,0,0,0.08);
+  font-size: 0.88rem;
+}
+table.overview th { background: var(--bg); font-weight: 600; text-align: left; color: var(--text-secondary); }
+table.overview .modus-label { font-weight: 700; writing-mode: vertical-rl; text-orientation: mixed; padding: 14px 8px; }
+
+/* TAB SYSTEM */
+.tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 0;
+  padding: 20px 20px 0;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.tab-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  position: relative;
+}
+.tab-btn:hover { background: rgba(0,0,0,0.04); color: var(--text); }
+.tab-btn.active {
+  background: var(--white);
+  color: var(--text);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--white);
+}
+.tab-content-area {
+  max-width: 1120px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--card-shadow);
+  min-height: 300px;
+}
+.tab-panel { display: none; padding: 24px; }
+.tab-panel.active { display: block; }
+
+/* BEZIEHUNGSNETZ */
+.relation-map {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  margin: 28px auto;
+  max-width: 1120px;
+  box-shadow: var(--card-shadow);
+  overflow-x: auto;
+  color: var(--text);
+}
+.relation-map h2 { text-align: center; margin-bottom: 8px; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.025em; color: var(--text); }
+.relation-map p.subtitle { text-align: center; color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem; }
+.net-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.net-col { text-align: center; }
+.net-col h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 10px; padding: 8px; border-radius: 10px; letter-spacing: -0.01em; }
+.net-node {
+  display: block;
+  padding: 10px 12px;
+  margin: 5px auto;
+  max-width: 210px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  position: relative;
+  border: 1.5px solid;
+  cursor: help;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.net-node small { display: block; font-weight: 400; font-size: 0.76rem; color: var(--text-secondary); margin-top: 1px; }
+.net-arrow {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 1px 0;
+  font-weight: 600;
+}
+.net-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 10px;
+  margin: 8px auto;
+  max-width: 300px;
+  background: #fffbeb;
+  border: 1.5px dashed #e5c44a;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #78590a;
+  text-align: center;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .net-grid { grid-template-columns: 1fr; gap: 20px; }
+  .tab-btn { font-size: 0.78rem; padding: 8px 10px; }
+  .tab-nav { gap: 2px; padding: 12px 12px 0; }
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --white: #1c1c1e;
+    --text: #f5f5f7;
+    --text-secondary: #aeaeb2;
+    --border: #38383a;
+    --ending: #ff8a8a;
+    --stem: #82b4f0;
+    --indicatif: #5aadff;
+    --indicatif-bg: #1a2636;
+    --indicatif-light: #1e3352;
+    --subjonctif: #b88aee;
+    --subjonctif-bg: #261c38;
+    --subjonctif-light: #3a2858;
+    --conditionnel: #ff9a6c;
+    --conditionnel-bg: #2e1d12;
+    --conditionnel-light: #4a2a14;
+    --imperatif: #ff8080;
+    --imperatif-bg: #2e1616;
+    --imperatif-light: #4a1e1e;
+    --infinitif: #66d9a0;
+    --infinitif-bg: #122a1e;
+    --infinitif-light: #1a3d2a;
+    --participe: #6cc8e4;
+    --participe-bg: #122430;
+    --participe-light: #1a3648;
+    --gerondif: #e8c460;
+    --gerondif-bg: #2a2210;
+    --gerondif-light: #3d3218;
+    --card-shadow: 0 2px 12px rgba(0,0,0,0.3), 0 0 1px rgba(255,255,255,0.05);
+    --card-shadow-hover: 0 8px 30px rgba(0,0,0,0.4), 0 0 1px rgba(255,255,255,0.08);
+  }
+  nav { background: rgba(0,0,0,0.72); border-bottom-color: rgba(255,255,255,0.08); }
+  .hero { background: #000; }
+  .formation-box { background: #2c2c2e; }
+  .example-item { background: #2c2c2e; }
+  .tipp-box { background: #2c2210; border-color: #7a5504; color: #f0d88a; }
+  .tipp-box strong { color: #fce088; }
+  .footer-overview { background: var(--white); }
+  table.overview th { background: #2c2c2e; color: var(--text-secondary); }
+  table.conj th { background: #2c2c2e; }
+  .formula { background: #2c2c2e; border-color: var(--border); }
+  .modus-header .badge-de { background: rgba(255,255,255,0.1); color: var(--text); }
+  .tab-btn:hover { background: rgba(255,255,255,0.06); }
+  .tab-btn.active { background: var(--white); }
+  .net-link { background: #2c2210; border-color: #7a5504; color: #f0d88a; }
+  .desc-box { background: #2c2c2e; }
+  .conj-scroll { border-color: var(--border); }
+  table.conj tr:hover td { background: rgba(255,255,255,0.03); }
+  .example-fr { color: #82b4f0; }
+  .net-node small { color: var(--text-secondary); }
+  .net-col h4 { color: var(--text) !important; }
+  .chip { color: var(--text) !important; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .modus-header { padding: 20px 16px; }
+  .tense-header { padding: 14px 16px; }
+  .tense-body { padding: 0 16px 16px; }
+  .desc-box { padding: 12px 14px; }
+  .modi-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 6px; }
+  .hero { padding: 36px 16px 32px; }
+  .tab-panel { padding: 16px; }
+  .relation-map { padding: 20px 14px; }
+  .footer-overview { padding: 20px 14px; }
+
+  /* MOBILE CARD TABLES - stack instead of horizontal scroll */
+  .footer-overview table.conj,
+  .footer-overview table.overview { font-size: 0.82rem; }
+
+  /* Make ALL scroll tables more visible */
+  .conj-scroll, .overview-scroll {
+    position: relative;
+    margin-left: -4px;
+    margin-right: -4px;
+    padding: 0 4px;
+  }
+  .conj-scroll::after, .overview-scroll::after {
+    content: '← scroll →';
+    display: block;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    padding: 6px 0 2px;
+    opacity: 0.7;
+  }
+  table.conj { min-width: 420px; font-size: 0.84rem; }
+  table.conj th, table.conj td { padding: 7px 10px; }
+
+  /* Si-Satz & pattern tables: stack on mobile */
+  .si-table-mobile { display: block !important; }
+  .si-table-desktop { display: none !important; }
+}
+@media (min-width: 601px) {
+  .si-table-mobile { display: none !important; }
+  .si-table-desktop { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <h1>Les Modes et les Temps</h1>
+  <p>Alle französischen Verbmodi und Zeiten – vollständige Lernübersicht mit Bildungsregeln, Konjugationen und Beispielen</p>
+
+  <div class="modi-grid">
+    <a href="#indicatif" class="modi-card">
+      <span class="modi-icon">📊</span>
+      <span class="modi-name">Indicatif</span>
+      <span class="modi-de">Wirklichkeitsform</span>
+    </a>
+    <a href="#subjonctif" class="modi-card">
+      <span class="modi-icon">🌀</span>
+      <span class="modi-name">Subjonctif</span>
+      <span class="modi-de">Möglichkeitsform</span>
+    </a>
+    <a href="#conditionnel" class="modi-card">
+      <span class="modi-icon">🔀</span>
+      <span class="modi-name">Conditionnel</span>
+      <span class="modi-de">Bedingungsform</span>
+    </a>
+    <a href="#imperatif" class="modi-card">
+      <span class="modi-icon">👉</span>
+      <span class="modi-name">Impératif</span>
+      <span class="modi-de">Befehlsform</span>
+    </a>
+    <a href="#infinitif" class="modi-card">
+      <span class="modi-icon">♾️</span>
+      <span class="modi-name">Infinitif</span>
+      <span class="modi-de">Grundform</span>
+    </a>
+    <a href="#participe" class="modi-card">
+      <span class="modi-icon">🔗</span>
+      <span class="modi-name">Participe</span>
+      <span class="modi-de">Mittelwort</span>
+    </a>
+    <a href="#gerondif" class="modi-card">
+      <span class="modi-icon">⚡</span>
+      <span class="modi-name">Gérondif</span>
+      <span class="modi-de">Verlaufsform</span>
+    </a>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- ============================================================ -->
+<!-- BEZIEHUNGSNETZ -->
+<!-- ============================================================ -->
+<div class="relation-map">
+  <h2>🕸️ Wie hängen die Zeiten zusammen?</h2>
+  <p class="subtitle">Die französischen Zeiten bilden ein logisches System. Verstehe die Verbindungen!</p>
+
+  <div class="net-grid">
+    <!-- VERGANGENHEIT -->
+    <div class="net-col">
+      <h4 style="background: #991b1b; color: #ffffff; border-radius: 10px; padding: 8px;">⏪ Vergangenheit</h4>
+      <div class="net-node" style="border-color: var(--indicatif); background: var(--indicatif-bg);">
+        Plus-que-parfait
+        <small>Vorvergangenheit</small>
+      </div>
+      <div class="net-arrow">↓ danach</div>
+      <div class="net-node" style="border-color: var(--indicatif); background: var(--indicatif-bg);">
+        Passé composé / Passé simple
+        <small>Abgeschlossenes Ereignis ⚡</small>
+      </div>
+      <div class="net-arrow">↕ gleichzeitig</div>
+      <div class="net-node" style="border-color: var(--indicatif); background: var(--indicatif-bg);">
+        Imparfait
+        <small>Hintergrund / Zustand 🎬</small>
+      </div>
+      <div class="net-arrow">↓ gerade eben</div>
+      <div class="net-node" style="border-color: var(--indicatif); background: #1a2636;">
+        Passé récent
+        <small>venir de + Infinitiv</small>
+      </div>
+    </div>
+
+    <!-- GEGENWART -->
+    <div class="net-col">
+      <h4 style="background: #166534; color: #ffffff; border-radius: 10px; padding: 8px;">⏺️ Gegenwart</h4>
+      <div class="net-node" style="border-color: var(--indicatif); background: #1a2636; border-width: 3px;">
+        <strong>PRÉSENT</strong>
+        <small>Der Dreh- und Angelpunkt</small>
+      </div>
+      <div class="net-arrow">↕</div>
+      <div class="net-link">🧩 Stamm des Présent → bildet Imparfait, Subjonctif, Participe présent, Gérondif</div>
+      <div class="net-arrow">↕</div>
+      <div class="net-node" style="border-color: var(--subjonctif); background: var(--subjonctif-bg);">
+        Subjonctif présent
+        <small>Gefühl / Wunsch / Zweifel</small>
+      </div>
+      <div class="net-arrow">↕</div>
+      <div class="net-node" style="border-color: var(--imperatif); background: var(--imperatif-bg);">
+        Impératif
+        <small>= Présent ohne Pronomen</small>
+      </div>
+      <div class="net-arrow">↕</div>
+      <div class="net-node" style="border-color: var(--conditionnel); background: var(--conditionnel-bg);">
+        Conditionnel présent
+        <small>was wäre wenn…</small>
+      </div>
+      <div class="net-link">🔗 Conditionnel = Futur-Stamm + Imparfait-Endungen (Mischform!)</div>
+    </div>
+
+    <!-- ZUKUNFT -->
+    <div class="net-col">
+      <h4 style="background: #1e3a5f; color: #ffffff; border-radius: 10px; padding: 8px;">⏩ Zukunft</h4>
+      <div class="net-node" style="border-color: var(--indicatif); background: #1a2636;">
+        Futur proche
+        <small>aller + Infinitiv 🔜</small>
+      </div>
+      <div class="net-arrow">↓ weiter weg</div>
+      <div class="net-node" style="border-color: var(--indicatif); background: var(--indicatif-bg);">
+        Futur simple
+        <small>Infinitiv + Endungen 🔮</small>
+      </div>
+      <div class="net-arrow">↓ davor abgeschlossen</div>
+      <div class="net-node" style="border-color: var(--indicatif); background: var(--indicatif-bg);">
+        Futur antérieur
+        <small>Vorzukunft</small>
+      </div>
+      <div style="margin-top: 16px;"></div>
+      <div class="net-link">🧱 Alle zusammengesetzten Zeiten:<br><strong>Hilfsverb (in einfacher Zeit) + Participe passé</strong></div>
+    </div>
+  </div>
+
+  <!-- VERBINDUNGSLEGENDE -->
+  <div style="margin-top: 24px; padding: 16px; background: var(--white); border-radius: 12px; box-shadow: var(--card-shadow); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; font-size: 0.88rem; color: var(--text);">
+    <div><span style="color: var(--indicatif); font-size: 1.2em;">●</span> <strong>Indicatif:</strong> Fakten, reale Handlungen</div>
+    <div><span style="color: var(--subjonctif); font-size: 1.2em;">●</span> <strong>Subjonctif:</strong> Subjektivität (nach que + Auslöser)</div>
+    <div><span style="color: var(--conditionnel); font-size: 1.2em;">●</span> <strong>Conditionnel:</strong> Hypothetisch, höflich (si-Sätze)</div>
+    <div><span style="color: var(--imperatif); font-size: 1.2em;">●</span> <strong>Impératif:</strong> Befehle (aus Présent abgeleitet)</div>
+    <div><strong>🔗 Participe passé:</strong> Baustein für ALLE zusammengesetzten Zeiten</div>
+    <div><strong>🧩 nous-Stamm:</strong> Basis für Imparfait, Subjonctif, Participe prés., Gérondif</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB NAVIGATION -->
+<!-- ============================================================ -->
+<div class="tab-nav" id="tab-nav">
+  <button class="tab-btn active" data-tab="indicatif" style="color: var(--indicatif);">📊 Indicatif</button>
+  <button class="tab-btn" data-tab="subjonctif" style="color: var(--subjonctif);">🌀 Subjonctif</button>
+  <button class="tab-btn" data-tab="conditionnel" style="color: var(--conditionnel);">🔀 Conditionnel</button>
+  <button class="tab-btn" data-tab="imperatif" style="color: var(--imperatif);">👉 Impératif</button>
+  <button class="tab-btn" data-tab="infinitif" style="color: var(--infinitif);">♾️ Infinitif</button>
+  <button class="tab-btn" data-tab="participe" style="color: var(--participe);">🔗 Participe</button>
+  <button class="tab-btn" data-tab="gerondif" style="color: var(--gerondif);">⚡ Gérondif</button>
+</div>
+<div class="tab-content-area">
+
+<!-- ============================================================ -->
+<!-- INDICATIF -->
+<!-- ============================================================ -->
+<section class="modus-section tab-panel active" id="indicatif" data-tab="indicatif">
+  <div class="modus-header" style="background: var(--indicatif-bg); border: 2px solid var(--indicatif-light);">
+    <h2 style="color: var(--indicatif);">
+      📊 L'Indicatif
+      <span class="badge-de" style="color: var(--indicatif);">Wirklichkeitsform</span>
+    </h2>
+    <p>Der <strong>Indicatif</strong> ist der meistbenutzte Modus im Französischen. Er drückt <strong>Fakten, Tatsachen und reale Handlungen</strong> aus – alles, was tatsächlich geschieht, geschehen ist oder geschehen wird. Er ist der „Normalfall" der Konjugation.</p>
+    <p style="margin-top: 10px; padding: 10px 14px; background: rgba(0,81,168,0.08); border-radius: 10px; font-size: 0.92rem; color: var(--text);">
+      ⭐ <strong>Priorität zum Lernen:</strong> Présent, Passé composé, Imparfait und Futur proche sind die 4 Zeiten, die du im Alltag am meisten brauchst. Lerne diese zuerst perfekt, bevor du dich an die anderen machst!
+    </p>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="timeline">
+    <div class="timeline-segment"><span class="tl-label">Plus-que-parfait</span><span class="tl-name">Vorvergangenheit</span></div>
+    <div class="timeline-line"></div>
+    <div class="timeline-segment"><span class="tl-label">Passé simple / composé</span><span class="tl-name">Vergangenheit</span></div>
+    <div class="timeline-line"></div>
+    <div class="timeline-segment"><span class="tl-label">Imparfait</span><span class="tl-name">Hintergrund</span></div>
+    <div class="timeline-line"></div>
+    <div class="timeline-dot timeline-now"></div>
+    <div class="timeline-line"></div>
+    <div class="timeline-segment"><span class="tl-label">Présent</span><span class="tl-name">Gegenwart</span></div>
+    <div class="timeline-line"></div>
+    <div class="timeline-segment"><span class="tl-label">Futur simple</span><span class="tl-name">Zukunft</span></div>
+    <div class="timeline-line"></div>
+    <div class="timeline-segment"><span class="tl-label">Futur antérieur</span><span class="tl-name">Vorzukunft</span></div>
+  </div>
+
+  <!-- PRÉSENT -->
+  <div class="tense-card everyday open">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">Le Présent</h3>
+        <span class="tense-de">Gegenwart / Präsens</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Présent</strong> ist die wichtigste und häufigste Zeitform. Es beschreibt, was <strong>jetzt gerade passiert</strong>, was <strong>allgemein gültig</strong> ist (Gewohnheiten, Fakten), und wird auch für <strong>nahe Zukunft</strong> oder <strong>lebendige Erzählung</strong> (présent historique) verwendet.
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Aktuelle Handlung</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Gewohnheit</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Allgemeine Wahrheit</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Nahe Zukunft</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p><strong>Regelmäßige Verben</strong> – Stamm + Endungen je nach Gruppe:</p>
+        <div style="margin: 8px 0;">
+          <div class="formula">1. Gruppe (-er): <span class="stem">parl</span><span class="ending">-e, -es, -e, -ons, -ez, -ent</span></div>
+        </div>
+        <div style="margin: 8px 0;">
+          <div class="formula">2. Gruppe (-ir): <span class="stem">fin</span><span class="ending">-is, -is, -it, -issons, -issez, -issent</span></div>
+        </div>
+        <div style="margin: 8px 0;">
+          <div class="formula">3. Gruppe (-re/-oir): unregelmäßig – müssen gelernt werden!</div>
+        </div>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler 🗣️</th><th>être ⭐</th><th>avoir ⭐</th><th>aller 🚶</th><th>faire 🔧</th><th>pouvoir 💪</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td><span class="stem">parl</span><span class="e">e</span></td><td>suis</td><td>ai</td><td>vais</td><td>fais</td><td>peux</td></tr>
+              <tr><td class="person">tu</td><td><span class="stem">parl</span><span class="e">es</span></td><td>es</td><td>as</td><td>vas</td><td>fais</td><td>peux</td></tr>
+              <tr><td class="person">il/elle</td><td><span class="stem">parl</span><span class="e">e</span></td><td>est</td><td>a</td><td>va</td><td>fait</td><td>peut</td></tr>
+              <tr><td class="person">nous</td><td><span class="stem">parl</span><span class="e">ons</span></td><td>sommes</td><td>avons</td><td>allons</td><td>faisons</td><td>pouvons</td></tr>
+              <tr><td class="person">vous</td><td><span class="stem">parl</span><span class="e">ez</span></td><td>êtes</td><td>avez</td><td>allez</td><td>faites</td><td>pouvez</td></tr>
+              <tr><td class="person">ils/elles</td><td><span class="stem">parl</span><span class="e">ent</span></td><td>sont</td><td>ont</td><td>vont</td><td>font</td><td>peuvent</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Je parle français tous les jours.</div>
+          <div class="example-de">→ Ich spreche jeden Tag Französisch. (Gewohnheit)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Il fait beau aujourd'hui.</div>
+          <div class="example-de">→ Es ist schön heute. (Aktuelle Situation)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">L'eau bout à 100 degrés.</div>
+          <div class="example-de">→ Wasser kocht bei 100 Grad. (Allgemeine Wahrheit)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Merktipp:</strong> Bei -er Verben sind die Endungen <strong>je/tu/il/ils</strong> stumm – sie klingen alle gleich! Nur <strong>nous (-ons)</strong> und <strong>vous (-ez)</strong> hört man deutlich.
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPARFAIT -->
+  <div class="tense-card everyday">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">L'Imparfait</h3>
+        <span class="tense-de">Verlaufsvergangenheit / Imperfekt</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Imparfait</strong> beschreibt <strong>Zustände, Gewohnheiten und Hintergründe</strong> in der Vergangenheit. Es ist wie eine Kamera, die eine Szene filmt – es zeigt, was <strong>im Hintergrund lief</strong>, nicht die einzelnen Ereignisse. Denke daran wie: „Es war einmal…" oder „Jeden Tag ging er…"
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Gewohnheit in der Vergangenheit</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Beschreibung / Zustand</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Hintergrundhandlung</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Höfliche Bitte</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p>Stamm der <strong>nous-Form im Présent</strong> + Imparfait-Endungen:</p>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">nous parl<u>ons</u></span> → <span class="stem">parl</span><span class="ending">-ais, -ais, -ait, -ions, -iez, -aient</span></div>
+        </div>
+        <p style="margin-top: 8px;"><strong>Einzige Ausnahme:</strong> <em>être</em> → Stamm <strong>ét-</strong></p>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler 🗣️</th><th>être ⭐</th><th>avoir ⭐</th><th>faire 🔧</th><th>aller 🚶</th><th>pouvoir 💪</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td><span class="stem">parl</span><span class="e">ais</span></td><td><span class="stem">ét</span><span class="e">ais</span></td><td><span class="stem">av</span><span class="e">ais</span></td><td><span class="stem">fais</span><span class="e">ais</span></td><td><span class="stem">all</span><span class="e">ais</span></td><td><span class="stem">pouv</span><span class="e">ais</span></td></tr>
+              <tr><td class="person">tu</td><td><span class="stem">parl</span><span class="e">ais</span></td><td><span class="stem">ét</span><span class="e">ais</span></td><td><span class="stem">av</span><span class="e">ais</span></td><td><span class="stem">fais</span><span class="e">ais</span></td><td><span class="stem">all</span><span class="e">ais</span></td><td><span class="stem">pouv</span><span class="e">ais</span></td></tr>
+              <tr><td class="person">il/elle</td><td><span class="stem">parl</span><span class="e">ait</span></td><td><span class="stem">ét</span><span class="e">ait</span></td><td><span class="stem">av</span><span class="e">ait</span></td><td><span class="stem">fais</span><span class="e">ait</span></td><td><span class="stem">all</span><span class="e">ait</span></td><td><span class="stem">pouv</span><span class="e">ait</span></td></tr>
+              <tr><td class="person">nous</td><td><span class="stem">parl</span><span class="e">ions</span></td><td><span class="stem">ét</span><span class="e">ions</span></td><td><span class="stem">av</span><span class="e">ions</span></td><td><span class="stem">fais</span><span class="e">ions</span></td><td><span class="stem">all</span><span class="e">ions</span></td><td><span class="stem">pouv</span><span class="e">ions</span></td></tr>
+              <tr><td class="person">vous</td><td><span class="stem">parl</span><span class="e">iez</span></td><td><span class="stem">ét</span><span class="e">iez</span></td><td><span class="stem">av</span><span class="e">iez</span></td><td><span class="stem">fais</span><span class="e">iez</span></td><td><span class="stem">all</span><span class="e">iez</span></td><td><span class="stem">pouv</span><span class="e">iez</span></td></tr>
+              <tr><td class="person">ils/elles</td><td><span class="stem">parl</span><span class="e">aient</span></td><td><span class="stem">ét</span><span class="e">aient</span></td><td><span class="stem">av</span><span class="e">aient</span></td><td><span class="stem">fais</span><span class="e">aient</span></td><td><span class="stem">all</span><span class="e">aient</span></td><td><span class="stem">pouv</span><span class="e">aient</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Quand j'étais petit, je parlais toujours avec mon chat.</div>
+          <div class="example-de">→ Als ich klein war, sprach ich immer mit meiner Katze. (Gewohnheit)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Il faisait beau et les oiseaux chantaient.</div>
+          <div class="example-de">→ Es war schön und die Vögel sangen. (Beschreibung/Hintergrund)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Je voulais vous demander un service.</div>
+          <div class="example-de">→ Ich wollte Sie um einen Gefallen bitten. (Höfliche Bitte)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Imparfait vs. Passé composé:</strong> Imparfait = Hintergrund/Zustand 🎬 | Passé composé = konkretes Ereignis ⚡. Beispiel: <em>Je <u>dormais</u> (Imparfait) quand le téléphone <u>a sonné</u> (P.C.).</em> – „Ich schlief (Hintergrund), als das Telefon klingelte (Ereignis)."
+      </div>
+    </div>
+  </div>
+
+  <!-- PASSÉ COMPOSÉ -->
+  <div class="tense-card everyday">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">Le Passé Composé</h3>
+        <span class="tense-de">Zusammengesetzte Vergangenheit / Perfekt</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Passé composé</strong> ist die wichtigste Vergangenheitsform im gesprochenen Französisch. Es beschreibt <strong>abgeschlossene Handlungen</strong> – Dinge, die einmal passiert sind und fertig sind. Es ist das französische Äquivalent zum deutschen Perfekt.
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Abgeschlossene Handlung</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Einmaliges Ereignis</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Aufeinanderfolge</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p><strong>Hilfsverb (avoir/être) im Présent + Participe passé</strong></p>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">avoir/être (Présent)</span><span class="plus">+</span><span class="ending">Participe passé</span></div>
+        </div>
+        <p style="margin-top: 10px;"><strong>Participe passé Bildung:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+          <li>-er Verben → <strong>-é</strong> (parlé, mangé, allé)</li>
+          <li>-ir Verben → <strong>-i</strong> (fini, choisi)</li>
+          <li>-re Verben → <strong>-u</strong> (vendu, attendu)</li>
+          <li>Unregelmäßig: fait, été, eu, pu, voulu, su, vu, dit…</li>
+        </ul>
+        <p style="margin-top: 10px; background: #1a2636; padding: 10px; border-radius: 8px;">
+          ⚠️ <strong>Être-Verben</strong> (Bewegung/Zustandsänderung): aller, venir, arriver, partir, monter, descendre, entrer, sortir, naître, mourir, rester, tomber, retourner, devenir, revenir, passer + alle reflexiven Verben! → Participe passé wird wie ein Adjektiv an das Subjekt angeglichen!
+        </p>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler (avoir)</th><th>aller (être)</th><th>faire (avoir)</th><th>se laver (être)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td>j'<span class="stem">ai</span> <span class="e">parlé</span></td><td>je <span class="stem">suis</span> <span class="e">allé(e)</span></td><td>j'<span class="stem">ai</span> <span class="e">fait</span></td><td>je me <span class="stem">suis</span> <span class="e">lavé(e)</span></td></tr>
+              <tr><td class="person">tu</td><td>tu <span class="stem">as</span> <span class="e">parlé</span></td><td>tu <span class="stem">es</span> <span class="e">allé(e)</span></td><td>tu <span class="stem">as</span> <span class="e">fait</span></td><td>tu t'<span class="stem">es</span> <span class="e">lavé(e)</span></td></tr>
+              <tr><td class="person">il/elle</td><td>il <span class="stem">a</span> <span class="e">parlé</span></td><td>il <span class="stem">est</span> <span class="e">allé</span> / elle <span class="stem">est</span> <span class="e">allée</span></td><td>il <span class="stem">a</span> <span class="e">fait</span></td><td>il s'<span class="stem">est</span> <span class="e">lavé</span></td></tr>
+              <tr><td class="person">nous</td><td>nous <span class="stem">avons</span> <span class="e">parlé</span></td><td>nous <span class="stem">sommes</span> <span class="e">allé(e)s</span></td><td>nous <span class="stem">avons</span> <span class="e">fait</span></td><td>nous nous <span class="stem">sommes</span> <span class="e">lavé(e)s</span></td></tr>
+              <tr><td class="person">vous</td><td>vous <span class="stem">avez</span> <span class="e">parlé</span></td><td>vous <span class="stem">êtes</span> <span class="e">allé(e)(s)</span></td><td>vous <span class="stem">avez</span> <span class="e">fait</span></td><td>vous vous <span class="stem">êtes</span> <span class="e">lavé(e)(s)</span></td></tr>
+              <tr><td class="person">ils/elles</td><td>ils <span class="stem">ont</span> <span class="e">parlé</span></td><td>ils <span class="stem">sont</span> <span class="e">allés</span> / elles <span class="e">allées</span></td><td>ils <span class="stem">ont</span> <span class="e">fait</span></td><td>ils se <span class="stem">sont</span> <span class="e">lavés</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">J'ai parlé avec Marie hier soir.</div>
+          <div class="example-de">→ Ich habe gestern Abend mit Marie gesprochen. (Einmaliges Ereignis)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Elle est allée au cinéma.</div>
+          <div class="example-de">→ Sie ist ins Kino gegangen. (être-Verb → Angleichung: allée!)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Nous avons fait nos devoirs, puis nous avons mangé.</div>
+          <div class="example-de">→ Wir haben unsere Hausaufgaben gemacht, dann haben wir gegessen. (Aufeinanderfolge)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>DR. & MRS. VANDERTRAMP</strong> – Eselsbrücke für être-Verben: <strong>D</strong>evenir, <strong>R</strong>evenir, <strong>M</strong>onter, <strong>R</strong>ester, <strong>S</strong>ortir, <strong>V</strong>enir, <strong>A</strong>ller, <strong>N</strong>aître, <strong>D</strong>escendre, <strong>E</strong>ntrer, <strong>R</strong>etourner, <strong>T</strong>omber, <strong>R</strong>entrer, <strong>A</strong>rriver, <strong>M</strong>ourir, <strong>P</strong>artir.
+      </div>
+    </div>
+  </div>
+
+  <!-- PASSÉ SIMPLE -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">Le Passé Simple</h3>
+        <span class="tense-de">Einfache Vergangenheit / Historisches Perfekt</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Passé simple</strong> ist die literarische Vergangenheitsform. Im gesprochenen Französisch kommt es <strong>fast nie vor</strong> – es steht in Romanen, Geschichtsbüchern und formellen Texten. Es ersetzt dort das Passé composé und beschreibt <strong>abgeschlossene, punktuelle Handlungen</strong>. Du musst es erkennen können, aber selten selbst benutzen.
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Literarisch / Schriftlich</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Abgeschlossene Handlung</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Historische Erzählung</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p>Stamm + Endungen je nach Verbgruppe:</p>
+        <div style="margin: 8px 0;">
+          <div class="formula">1. Gruppe (-er): <span class="stem">parl</span><span class="ending">-ai, -as, -a, -âmes, -âtes, -èrent</span></div>
+        </div>
+        <div style="margin: 8px 0;">
+          <div class="formula">2. Gruppe (-ir): <span class="stem">fin</span><span class="ending">-is, -is, -it, -îmes, -îtes, -irent</span></div>
+        </div>
+        <div style="margin: 8px 0;">
+          <div class="formula">3. Gruppe: oft -us/-ut (Stamm kann stark abweichen!)</div>
+        </div>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler 🗣️</th><th>être ⭐</th><th>avoir ⭐</th><th>faire 🔧</th><th>aller 🚶</th><th>pouvoir 💪</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td><span class="stem">parl</span><span class="e">ai</span></td><td>fus</td><td>eus</td><td>fis</td><td><span class="stem">all</span><span class="e">ai</span></td><td>pus</td></tr>
+              <tr><td class="person">tu</td><td><span class="stem">parl</span><span class="e">as</span></td><td>fus</td><td>eus</td><td>fis</td><td><span class="stem">all</span><span class="e">as</span></td><td>pus</td></tr>
+              <tr><td class="person">il/elle</td><td><span class="stem">parl</span><span class="e">a</span></td><td>fut</td><td>eut</td><td>fit</td><td><span class="stem">all</span><span class="e">a</span></td><td>put</td></tr>
+              <tr><td class="person">nous</td><td><span class="stem">parl</span><span class="e">âmes</span></td><td>fûmes</td><td>eûmes</td><td>fîmes</td><td><span class="stem">all</span><span class="e">âmes</span></td><td>pûmes</td></tr>
+              <tr><td class="person">vous</td><td><span class="stem">parl</span><span class="e">âtes</span></td><td>fûtes</td><td>eûtes</td><td>fîtes</td><td><span class="stem">all</span><span class="e">âtes</span></td><td>pûtes</td></tr>
+              <tr><td class="person">ils/elles</td><td><span class="stem">parl</span><span class="e">èrent</span></td><td>furent</td><td>eurent</td><td>firent</td><td><span class="stem">all</span><span class="e">èrent</span></td><td>purent</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Napoléon fut empereur de 1804 à 1814.</div>
+          <div class="example-de">→ Napoleon war Kaiser von 1804 bis 1814. (Historische Erzählung)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Elle entra dans la pièce et regarda autour d'elle.</div>
+          <div class="example-de">→ Sie betrat den Raum und sah sich um. (Literarische Erzählung)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Il fit un long voyage et revint transformé.</div>
+          <div class="example-de">→ Er machte eine lange Reise und kam verwandelt zurück. (Roman)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Für den Alltag:</strong> Du musst das Passé simple nur <strong>lesen und erkennen</strong> können. Beim Sprechen und Schreiben in Alltagssituationen benutzt du immer das <strong>Passé composé</strong>. Aber in Büchern wirst du es ständig sehen!
+      </div>
+    </div>
+  </div>
+
+  <!-- PLUS-QUE-PARFAIT -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">Le Plus-que-parfait</h3>
+        <span class="tense-de">Vorvergangenheit / Plusquamperfekt</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Plus-que-parfait</strong> beschreibt eine Handlung, die <strong>vor einer anderen Vergangenheitshandlung</strong> stattfand. Es ist die „Vergangenheit der Vergangenheit". Wenn du im Passé composé erzählst und auf etwas Früheres zurückblicken willst, brauchst du diese Zeit.
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Vorvergangenheit</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Rückblick</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Irrealer Konditionalsatz (si…)</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">avoir/être im Imparfait</span><span class="plus">+</span><span class="ending">Participe passé</span></div>
+        </div>
+        <p style="margin-top: 8px;">Gleiche Regeln wie beim Passé composé (avoir/être-Auswahl, Angleichung), nur das Hilfsverb steht im Imparfait statt im Présent.</p>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler (avoir)</th><th>aller (être)</th><th>faire (avoir)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td>j'<span class="stem">avais</span> <span class="e">parlé</span></td><td>j'<span class="stem">étais</span> <span class="e">allé(e)</span></td><td>j'<span class="stem">avais</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">tu</td><td>tu <span class="stem">avais</span> <span class="e">parlé</span></td><td>tu <span class="stem">étais</span> <span class="e">allé(e)</span></td><td>tu <span class="stem">avais</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">il/elle</td><td>il <span class="stem">avait</span> <span class="e">parlé</span></td><td>il <span class="stem">était</span> <span class="e">allé</span></td><td>il <span class="stem">avait</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">nous</td><td>nous <span class="stem">avions</span> <span class="e">parlé</span></td><td>nous <span class="stem">étions</span> <span class="e">allé(e)s</span></td><td>nous <span class="stem">avions</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">vous</td><td>vous <span class="stem">aviez</span> <span class="e">parlé</span></td><td>vous <span class="stem">étiez</span> <span class="e">allé(e)(s)</span></td><td>vous <span class="stem">aviez</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">ils/elles</td><td>ils <span class="stem">avaient</span> <span class="e">parlé</span></td><td>ils <span class="stem">étaient</span> <span class="e">allés</span></td><td>ils <span class="stem">avaient</span> <span class="e">fait</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Quand je suis arrivé, elle était déjà partie.</div>
+          <div class="example-de">→ Als ich ankam (PC), war sie schon weggegangen (PQP). – Weggehen passierte VOR dem Ankommen.</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Il avait étudié le français avant d'aller à Paris.</div>
+          <div class="example-de">→ Er hatte Französisch gelernt, bevor er nach Paris ging.</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Si j'avais su, je ne serais pas venu.</div>
+          <div class="example-de">→ Wenn ich es gewusst hätte, wäre ich nicht gekommen. (Irrealer Konditionalsatz)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Zeitstrahl-Trick:</strong> Plus-que-parfait ist wie eine Zeitmaschine IN der Vergangenheit. Du bist schon in der Vergangenheit (Passé composé) und gehst nochmal weiter zurück. ⏪⏪
+      </div>
+    </div>
+  </div>
+
+  <!-- FUTUR SIMPLE -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">Le Futur Simple</h3>
+        <span class="tense-de">Einfache Zukunft / Futur I</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Futur simple</strong> drückt Handlungen aus, die <strong>in der Zukunft</strong> stattfinden werden. Es klingt etwas formeller als das Futur proche und wird oft für <strong>Vorhersagen, Versprechen und Pläne</strong> verwendet.
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Zukünftige Handlung</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Versprechen</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Vorhersage</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Nach „quand/lorsque"</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p><strong>Infinitiv + avoir-Endungen</strong> (bei -re: das finale -e fällt weg)</p>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">Infinitiv</span><span class="plus">+</span><span class="ending">-ai, -as, -a, -ons, -ez, -ont</span></div>
+        </div>
+        <p style="margin-top: 8px;">⚠️ Unregelmäßige Stämme (auswendig lernen!): être→<strong>ser-</strong>, avoir→<strong>aur-</strong>, aller→<strong>ir-</strong>, faire→<strong>fer-</strong>, pouvoir→<strong>pourr-</strong>, vouloir→<strong>voudr-</strong>, savoir→<strong>saur-</strong>, venir→<strong>viendr-</strong></p>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler 🗣️</th><th>être ⭐</th><th>avoir ⭐</th><th>aller 🚶</th><th>faire 🔧</th><th>pouvoir 💪</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td><span class="stem">parler</span><span class="e">ai</span></td><td><span class="stem">ser</span><span class="e">ai</span></td><td><span class="stem">aur</span><span class="e">ai</span></td><td><span class="stem">ir</span><span class="e">ai</span></td><td><span class="stem">fer</span><span class="e">ai</span></td><td><span class="stem">pourr</span><span class="e">ai</span></td></tr>
+              <tr><td class="person">tu</td><td><span class="stem">parler</span><span class="e">as</span></td><td><span class="stem">ser</span><span class="e">as</span></td><td><span class="stem">aur</span><span class="e">as</span></td><td><span class="stem">ir</span><span class="e">as</span></td><td><span class="stem">fer</span><span class="e">as</span></td><td><span class="stem">pourr</span><span class="e">as</span></td></tr>
+              <tr><td class="person">il/elle</td><td><span class="stem">parler</span><span class="e">a</span></td><td><span class="stem">ser</span><span class="e">a</span></td><td><span class="stem">aur</span><span class="e">a</span></td><td><span class="stem">ir</span><span class="e">a</span></td><td><span class="stem">fer</span><span class="e">a</span></td><td><span class="stem">pourr</span><span class="e">a</span></td></tr>
+              <tr><td class="person">nous</td><td><span class="stem">parler</span><span class="e">ons</span></td><td><span class="stem">ser</span><span class="e">ons</span></td><td><span class="stem">aur</span><span class="e">ons</span></td><td><span class="stem">ir</span><span class="e">ons</span></td><td><span class="stem">fer</span><span class="e">ons</span></td><td><span class="stem">pourr</span><span class="e">ons</span></td></tr>
+              <tr><td class="person">vous</td><td><span class="stem">parler</span><span class="e">ez</span></td><td><span class="stem">ser</span><span class="e">ez</span></td><td><span class="stem">aur</span><span class="e">ez</span></td><td><span class="stem">ir</span><span class="e">ez</span></td><td><span class="stem">fer</span><span class="e">ez</span></td><td><span class="stem">pourr</span><span class="e">ez</span></td></tr>
+              <tr><td class="person">ils/elles</td><td><span class="stem">parler</span><span class="e">ont</span></td><td><span class="stem">ser</span><span class="e">ont</span></td><td><span class="stem">aur</span><span class="e">ont</span></td><td><span class="stem">ir</span><span class="e">ont</span></td><td><span class="stem">fer</span><span class="e">ont</span></td><td><span class="stem">pourr</span><span class="e">ont</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Demain, je parlerai avec le directeur.</div>
+          <div class="example-de">→ Morgen werde ich mit dem Direktor sprechen.</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Quand tu seras grand, tu comprendras.</div>
+          <div class="example-de">→ Wenn du groß bist, wirst du es verstehen. (Nach „quand" → Futur!)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Il fera beau ce week-end.</div>
+          <div class="example-de">→ Es wird schön am Wochenende. (Vorhersage)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Achtung Unterschied zum Deutschen!</strong> Nach <em>quand</em> (wenn/wann) steht im Französischen das <strong>Futur</strong>, nicht das Präsens! „Wenn ich komme" = <em>Quand je <u>viendrai</u></em> (NICHT: *quand je viens).
+      </div>
+    </div>
+  </div>
+
+  <!-- FUTUR ANTÉRIEUR -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">Le Futur Antérieur</h3>
+        <span class="tense-de">Vorzukunft / Futur II</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Futur antérieur</strong> beschreibt eine Handlung, die <strong>in der Zukunft abgeschlossen sein wird</strong>, bevor eine andere Zukunftshandlung beginnt. Es kann auch Vermutungen über die Vergangenheit ausdrücken.
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Abgeschlossen in der Zukunft</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Vermutung über Vergangenes</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">avoir/être im Futur simple</span><span class="plus">+</span><span class="ending">Participe passé</span></div>
+        </div>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler (avoir)</th><th>aller (être)</th><th>faire (avoir)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td>j'<span class="stem">aurai</span> <span class="e">parlé</span></td><td>je <span class="stem">serai</span> <span class="e">allé(e)</span></td><td>j'<span class="stem">aurai</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">tu</td><td>tu <span class="stem">auras</span> <span class="e">parlé</span></td><td>tu <span class="stem">seras</span> <span class="e">allé(e)</span></td><td>tu <span class="stem">auras</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">il/elle</td><td>il <span class="stem">aura</span> <span class="e">parlé</span></td><td>il <span class="stem">sera</span> <span class="e">allé</span></td><td>il <span class="stem">aura</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">nous</td><td>nous <span class="stem">aurons</span> <span class="e">parlé</span></td><td>nous <span class="stem">serons</span> <span class="e">allé(e)s</span></td><td>nous <span class="stem">aurons</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">vous</td><td>vous <span class="stem">aurez</span> <span class="e">parlé</span></td><td>vous <span class="stem">serez</span> <span class="e">allé(e)(s)</span></td><td>vous <span class="stem">aurez</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">ils/elles</td><td>ils <span class="stem">auront</span> <span class="e">parlé</span></td><td>ils <span class="stem">seront</span> <span class="e">allés</span></td><td>ils <span class="stem">auront</span> <span class="e">fait</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Quand tu arriveras, j'aurai déjà fini.</div>
+          <div class="example-de">→ Wenn du ankommst, werde ich schon fertig sein.</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Il aura oublié notre rendez-vous.</div>
+          <div class="example-de">→ Er wird wohl unser Treffen vergessen haben. (Vermutung)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Muster:</strong> Alle zusammengesetzten Zeiten = <strong>Hilfsverb (in einer einfachen Zeit) + Participe passé</strong>. Passé composé: Présent + PP. Plus-que-parfait: Imparfait + PP. Futur antérieur: Futur + PP. Das Muster ist immer gleich!
+      </div>
+    </div>
+  </div>
+
+  <!-- FUTUR PROCHE -->
+  <div class="tense-card everyday">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">Le Futur Proche</h3>
+        <span class="tense-de">Nahe Zukunft</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Futur proche</strong> drückt aus, was <strong>gleich passieren wird</strong> – unmittelbare, geplante Zukunft. Im gesprochenen Französisch wird es sogar <strong>häufiger als das Futur simple</strong> verwendet! Es entspricht dem deutschen „ich werde gleich…" / „ich bin dabei zu…".
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Gleich passierend</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Geplant</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Sicher eintretend</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">aller (Présent)</span><span class="plus">+</span><span class="ending">Infinitiv</span></div>
+        </div>
+        <p style="margin-top: 8px;">Super einfach! Du brauchst nur „aller" konjugieren + das Verb im Infinitiv.</p>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler</th><th>faire</th><th>partir</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td>je <span class="stem">vais</span> <span class="e">parler</span></td><td>je <span class="stem">vais</span> <span class="e">faire</span></td><td>je <span class="stem">vais</span> <span class="e">partir</span></td></tr>
+              <tr><td class="person">tu</td><td>tu <span class="stem">vas</span> <span class="e">parler</span></td><td>tu <span class="stem">vas</span> <span class="e">faire</span></td><td>tu <span class="stem">vas</span> <span class="e">partir</span></td></tr>
+              <tr><td class="person">il/elle</td><td>il <span class="stem">va</span> <span class="e">parler</span></td><td>il <span class="stem">va</span> <span class="e">faire</span></td><td>il <span class="stem">va</span> <span class="e">partir</span></td></tr>
+              <tr><td class="person">nous</td><td>nous <span class="stem">allons</span> <span class="e">parler</span></td><td>nous <span class="stem">allons</span> <span class="e">faire</span></td><td>nous <span class="stem">allons</span> <span class="e">partir</span></td></tr>
+              <tr><td class="person">vous</td><td>vous <span class="stem">allez</span> <span class="e">parler</span></td><td>vous <span class="stem">allez</span> <span class="e">faire</span></td><td>vous <span class="stem">allez</span> <span class="e">partir</span></td></tr>
+              <tr><td class="person">ils/elles</td><td>ils <span class="stem">vont</span> <span class="e">parler</span></td><td>ils <span class="stem">vont</span> <span class="e">faire</span></td><td>ils <span class="stem">vont</span> <span class="e">partir</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Je vais manger dans cinq minutes.</div>
+          <div class="example-de">→ Ich werde in fünf Minuten essen.</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Attention, il va pleuvoir !</div>
+          <div class="example-de">→ Vorsicht, es wird gleich regnen!</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Futur proche vs. Futur simple:</strong> Futur proche = gleich, sicher, nah 🔜 | Futur simple = ferner, formeller, unsicherer 🔮. Im Alltag reicht oft das Futur proche!
+      </div>
+    </div>
+  </div>
+
+  <!-- PASSÉ RÉCENT -->
+  <div class="tense-card everyday">
+    <div class="tense-header" style="border-left: 4px solid var(--indicatif);">
+      <div>
+        <h3 style="color: var(--indicatif);">Le Passé Récent</h3>
+        <span class="tense-de">Jüngste Vergangenheit</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--indicatif);">
+        Das <strong>Passé récent</strong> drückt aus, was <strong>gerade eben passiert ist</strong>. Es ist das Gegenstück zum Futur proche – statt „ich werde gleich…" heißt es „ich habe gerade…". Sehr häufig im gesprochenen Französisch!
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Gerade eben passiert</span>
+        <span class="chip" style="background: var(--indicatif-light); color: var(--indicatif);">Unmittelbare Vergangenheit</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">venir (Présent)</span><span class="plus">+ de +</span><span class="ending">Infinitiv</span></div>
+        </div>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler</th><th>faire</th><th>arriver</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td>je <span class="stem">viens de</span> <span class="e">parler</span></td><td>je <span class="stem">viens de</span> <span class="e">faire</span></td><td>je <span class="stem">viens d'</span><span class="e">arriver</span></td></tr>
+              <tr><td class="person">tu</td><td>tu <span class="stem">viens de</span> <span class="e">parler</span></td><td>tu <span class="stem">viens de</span> <span class="e">faire</span></td><td>tu <span class="stem">viens d'</span><span class="e">arriver</span></td></tr>
+              <tr><td class="person">il/elle</td><td>il <span class="stem">vient de</span> <span class="e">parler</span></td><td>il <span class="stem">vient de</span> <span class="e">faire</span></td><td>il <span class="stem">vient d'</span><span class="e">arriver</span></td></tr>
+              <tr><td class="person">nous</td><td>nous <span class="stem">venons de</span> <span class="e">parler</span></td><td>nous <span class="stem">venons de</span> <span class="e">faire</span></td><td>nous <span class="stem">venons d'</span><span class="e">arriver</span></td></tr>
+              <tr><td class="person">vous</td><td>vous <span class="stem">venez de</span> <span class="e">parler</span></td><td>vous <span class="stem">venez de</span> <span class="e">faire</span></td><td>vous <span class="stem">venez d'</span><span class="e">arriver</span></td></tr>
+              <tr><td class="person">ils/elles</td><td>ils <span class="stem">viennent de</span> <span class="e">parler</span></td><td>ils <span class="stem">viennent de</span> <span class="e">faire</span></td><td>ils <span class="stem">viennent d'</span><span class="e">arriver</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Je viens de manger, je n'ai plus faim.</div>
+          <div class="example-de">→ Ich habe gerade gegessen, ich habe keinen Hunger mehr.</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Il vient d'arriver, il est encore dans le couloir.</div>
+          <div class="example-de">→ Er ist gerade angekommen, er ist noch im Flur.</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Eselsbrücke:</strong> aller + Infinitiv = Zukunft 🔜 | venir de + Infinitiv = gerade eben ⏪. Zwei Konstruktionen, die zusammen das Présent einrahmen!
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- SUBJONCTIF -->
+<!-- ============================================================ -->
+<section class="modus-section tab-panel" id="subjonctif" data-tab="subjonctif">
+  <div class="modus-header" style="background: var(--subjonctif-bg); border: 2px solid var(--subjonctif-light);">
+    <h2 style="color: var(--subjonctif);">
+      🌀 Le Subjonctif
+      <span class="badge-de" style="color: var(--subjonctif);">Möglichkeitsform / Konjunktiv</span>
+    </h2>
+    <p>Der <strong>Subjonctif</strong> drückt <strong>Subjektivität</strong> aus: Wünsche, Zweifel, Gefühle, Meinungen, Notwendigkeiten. Er steht fast immer in Nebensätzen nach <strong>que</strong> und wird durch bestimmte Auslöser-Verben aktiviert. Er ist kein Zeitsystem, sondern ein <strong>Stimmungsmodus</strong>!</p>
+    <p style="margin-top: 10px; padding: 10px; background: rgba(106,42,184,0.08); border-radius: 8px; color: var(--text);">
+      <strong>Typische Auslöser:</strong> il faut que, je veux que, il est important que, je suis content que, je doute que, bien que, pour que, avant que, à moins que…
+    </p>
+  </div>
+
+  <!-- SUBJONCTIF PRÉSENT -->
+  <div class="tense-card everyday">
+    <div class="tense-header" style="border-left: 4px solid var(--subjonctif);">
+      <div>
+        <h3 style="color: var(--subjonctif);">Le Subjonctif Présent</h3>
+        <span class="tense-de">Gegenwart des Konjunktivs</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--subjonctif);">
+        Die <strong>Standardform</strong> des Subjonctif und die einzige, die du im Alltag wirklich brauchst. Sie deckt sowohl Gegenwart als auch Zukunft im Subjonctif ab.
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--subjonctif-light); color: var(--subjonctif);">Wunsch / Wille</span>
+        <span class="chip" style="background: var(--subjonctif-light); color: var(--subjonctif);">Gefühl / Emotion</span>
+        <span class="chip" style="background: var(--subjonctif-light); color: var(--subjonctif);">Zweifel</span>
+        <span class="chip" style="background: var(--subjonctif-light); color: var(--subjonctif);">Notwendigkeit</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p>Stamm der <strong>ils-Form im Présent (Indicatif)</strong> + Subjonctif-Endungen:</p>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">ils parl<u>ent</u></span> → que je <span class="stem">parl</span><span class="ending">-e, -es, -e, -ions, -iez, -ent</span></div>
+        </div>
+        <p style="margin-top: 8px;">⚠️ <strong>Wichtige Ausnahmen:</strong> être, avoir, aller, faire, pouvoir, savoir, vouloir – komplett unregelmäßig!</p>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler 🗣️</th><th>être ⭐</th><th>avoir ⭐</th><th>aller 🚶</th><th>faire 🔧</th><th>pouvoir 💪</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">que je</td><td><span class="stem">parl</span><span class="e">e</span></td><td>sois</td><td>aie</td><td>aille</td><td>fasse</td><td>puisse</td></tr>
+              <tr><td class="person">que tu</td><td><span class="stem">parl</span><span class="e">es</span></td><td>sois</td><td>aies</td><td>ailles</td><td>fasses</td><td>puisses</td></tr>
+              <tr><td class="person">qu'il/elle</td><td><span class="stem">parl</span><span class="e">e</span></td><td>soit</td><td>ait</td><td>aille</td><td>fasse</td><td>puisse</td></tr>
+              <tr><td class="person">que nous</td><td><span class="stem">parl</span><span class="e">ions</span></td><td>soyons</td><td>ayons</td><td>allions</td><td>fassions</td><td>puissions</td></tr>
+              <tr><td class="person">que vous</td><td><span class="stem">parl</span><span class="e">iez</span></td><td>soyez</td><td>ayez</td><td>alliez</td><td>fassiez</td><td>puissiez</td></tr>
+              <tr><td class="person">qu'ils/elles</td><td><span class="stem">parl</span><span class="e">ent</span></td><td>soient</td><td>aient</td><td>aillent</td><td>fassent</td><td>puissent</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Il faut que tu <u>fasses</u> tes devoirs.</div>
+          <div class="example-de">→ Du musst deine Hausaufgaben machen. (Notwendigkeit → Subjonctif!)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Je suis content qu'elle <u>soit</u> là.</div>
+          <div class="example-de">→ Ich bin froh, dass sie da ist. (Gefühl → Subjonctif!)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Je doute qu'il <u>puisse</u> venir.</div>
+          <div class="example-de">→ Ich bezweifle, dass er kommen kann. (Zweifel → Subjonctif!)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Bien qu'il <u>fasse</u> froid, je sors sans manteau.</div>
+          <div class="example-de">→ Obwohl es kalt ist, gehe ich ohne Mantel raus. (bien que → immer Subjonctif!)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Wann Subjonctif?</strong> Frage dich: Ist es eine <strong>Tatsache</strong> oder ein <strong>Gefühl/Wunsch/Zweifel</strong>? Tatsache → Indicatif. Alles andere → oft Subjonctif! Vergleiche: <em>Je sais qu'il <u>est</u> là</em> (Wissen = Fakt) vs. <em>Je veux qu'il <u>soit</u> là</em> (Wunsch = Subjonctif).
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBJONCTIF PASSÉ -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--subjonctif);">
+      <div>
+        <h3 style="color: var(--subjonctif);">Le Subjonctif Passé</h3>
+        <span class="tense-de">Vergangenheit des Konjunktivs</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--subjonctif);">
+        Das <strong>Subjonctif passé</strong> beschreibt eine <strong>abgeschlossene Handlung im subjektiven Kontext</strong>. Es wird verwendet, wenn die Handlung im Nebensatz VOR der Handlung im Hauptsatz liegt.
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">avoir/être im Subjonctif présent</span><span class="plus">+</span><span class="ending">Participe passé</span></div>
+        </div>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler (avoir)</th><th>aller (être)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">que je</td><td>que j'<span class="stem">aie</span> <span class="e">parlé</span></td><td>que je <span class="stem">sois</span> <span class="e">allé(e)</span></td></tr>
+              <tr><td class="person">que tu</td><td>que tu <span class="stem">aies</span> <span class="e">parlé</span></td><td>que tu <span class="stem">sois</span> <span class="e">allé(e)</span></td></tr>
+              <tr><td class="person">qu'il/elle</td><td>qu'il <span class="stem">ait</span> <span class="e">parlé</span></td><td>qu'il <span class="stem">soit</span> <span class="e">allé</span></td></tr>
+              <tr><td class="person">que nous</td><td>que nous <span class="stem">ayons</span> <span class="e">parlé</span></td><td>que nous <span class="stem">soyons</span> <span class="e">allé(e)s</span></td></tr>
+              <tr><td class="person">que vous</td><td>que vous <span class="stem">ayez</span> <span class="e">parlé</span></td><td>que vous <span class="stem">soyez</span> <span class="e">allé(e)(s)</span></td></tr>
+              <tr><td class="person">qu'ils/elles</td><td>qu'ils <span class="stem">aient</span> <span class="e">parlé</span></td><td>qu'ils <span class="stem">soient</span> <span class="e">allés</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Je suis content qu'elle ait réussi son examen.</div>
+          <div class="example-de">→ Ich bin froh, dass sie ihre Prüfung bestanden hat. (Abgeschlossene Handlung + Gefühl)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Je doute qu'il soit parti avant nous.</div>
+          <div class="example-de">→ Ich bezweifle, dass er vor uns gegangen ist.</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Muster erkennen:</strong> Subjonctif passé = Subjonctif présent von avoir/être + Participe passé. Gleiche Logik wie alle anderen zusammengesetzten Zeiten!
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBJONCTIF IMPARFAIT -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--subjonctif);">
+      <div>
+        <h3 style="color: var(--subjonctif);">Le Subjonctif Imparfait</h3>
+        <span class="tense-de">Imperfekt des Konjunktivs – LITERARISCH</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--subjonctif);">
+        ⚠️ <strong>Nur in literarischer Sprache!</strong> Im Alltag wird stattdessen der Subjonctif présent verwendet. Du wirst ihn in Romanen und alten Texten finden. Er basiert auf dem <strong>Passé simple</strong>.
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p>Basiert auf der <strong>2. Person Singular des Passé simple</strong> + Subjonctif-Imparfait-Endungen:</p>
+        <div style="margin: 8px 0;">
+          <div class="formula">tu parl<u>as</u> → que je <span class="stem">parl</span><span class="ending">-asse, -asses, -ât, -assions, -assiez, -assent</span></div>
+        </div>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler 🗣️</th><th>être ⭐</th><th>avoir ⭐</th><th>faire 🔧</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">que je</td><td>parlasse</td><td>fusse</td><td>eusse</td><td>fisse</td></tr>
+              <tr><td class="person">que tu</td><td>parlasses</td><td>fusses</td><td>eusses</td><td>fisses</td></tr>
+              <tr><td class="person">qu'il/elle</td><td>parlât</td><td>fût</td><td>eût</td><td>fît</td></tr>
+              <tr><td class="person">que nous</td><td>parlassions</td><td>fussions</td><td>eussions</td><td>fissions</td></tr>
+              <tr><td class="person">que vous</td><td>parlassiez</td><td>fussiez</td><td>eussiez</td><td>fissiez</td></tr>
+              <tr><td class="person">qu'ils/elles</td><td>parlassent</td><td>fussent</td><td>eussent</td><td>fissent</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Il fallait qu'il parlât au roi. <span style="color: var(--text-secondary);">(literarisch)</span></div>
+          <div class="example-de">→ Er musste mit dem König sprechen. — Heute: <em>Il fallait qu'il parle au roi.</em></div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Für Lernende:</strong> Nur passiv erkennen! Die 3. Person Singular erkennst du am <strong>Accent Circonflexe</strong>: qu'il parlât, qu'il fût, qu'il eût. Wenn du ein „-ât/-ît/-ût" in einem Text siehst, ist es Subjonctif imparfait.
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBJONCTIF PLUS-QUE-PARFAIT -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--subjonctif);">
+      <div>
+        <h3 style="color: var(--subjonctif);">Le Subjonctif Plus-que-parfait</h3>
+        <span class="tense-de">Plusquamperfekt des Konjunktivs – LITERARISCH</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--subjonctif);">
+        ⚠️ <strong>Extrem literarisch!</strong> Kombination aus Subjonctif imparfait des Hilfsverbs + Participe passé. Im modernen Französisch durch Subjonctif passé ersetzt.
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">avoir/être im Subj. imparfait</span><span class="plus">+</span><span class="ending">Participe passé</span></div>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Je ne croyais pas qu'il eût fait cela. <span style="color: var(--text-secondary);">(sehr literarisch)</span></div>
+          <div class="example-de">→ Ich glaubte nicht, dass er das getan hätte. — Heute: <em>…qu'il ait fait cela.</em></div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Merke:</strong> Subj. plus-que-parfait = Subj. imparfait von avoir (eusse, eusses, eût…) oder être (fusse, fusses, fût…) + Participe passé. Nur zur passiven Erkennung in klassischer Literatur!
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CONDITIONNEL -->
+<!-- ============================================================ -->
+<section class="modus-section tab-panel" id="conditionnel" data-tab="conditionnel">
+  <div class="modus-header" style="background: var(--conditionnel-bg); border: 2px solid var(--conditionnel-light);">
+    <h2 style="color: var(--conditionnel);">
+      🔀 Le Conditionnel
+      <span class="badge-de" style="color: var(--conditionnel);">Bedingungsform / Konditional</span>
+    </h2>
+    <p>Der <strong>Conditionnel</strong> drückt aus, was <strong>unter bestimmten Bedingungen passieren würde</strong>. Er steht für hypothetische Situationen, höfliche Bitten und unbestätigte Informationen. Eng verwandt mit dem Futur simple (gleicher Stamm!).</p>
+  </div>
+
+  <!-- CONDITIONNEL PRÉSENT -->
+  <div class="tense-card everyday">
+    <div class="tense-header" style="border-left: 4px solid var(--conditionnel);">
+      <div>
+        <h3 style="color: var(--conditionnel);">Le Conditionnel Présent</h3>
+        <span class="tense-de">Konditional der Gegenwart</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--conditionnel);">
+        Der <strong>Conditionnel présent</strong> ist das französische „würde". Er wird für <strong>höfliche Bitten, Wünsche, hypothetische Situationen und unbestätigte Nachrichten</strong> verwendet. Er steht im Ergebnis-Teil von si-Sätzen (wenn…, dann würde…).
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--conditionnel-light); color: var(--conditionnel);">Höflichkeit</span>
+        <span class="chip" style="background: var(--conditionnel-light); color: var(--conditionnel);">Hypothese (si + Imparfait)</span>
+        <span class="chip" style="background: var(--conditionnel-light); color: var(--conditionnel);">Wunsch</span>
+        <span class="chip" style="background: var(--conditionnel-light); color: var(--conditionnel);">Unbestätigte Info</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p><strong>Futur-simple-Stamm + Imparfait-Endungen</strong></p>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">Futur-Stamm (= Infinitiv oder unregel.)</span><span class="plus">+</span><span class="ending">-ais, -ais, -ait, -ions, -iez, -aient</span></div>
+        </div>
+        <p style="margin-top: 8px;">Gleiche unregelmäßige Stämme wie beim Futur simple: ser-, aur-, ir-, fer-, pourr-, voudr-, saur-…</p>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler 🗣️</th><th>être ⭐</th><th>avoir ⭐</th><th>aller 🚶</th><th>faire 🔧</th><th>vouloir 🙏</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td><span class="stem">parler</span><span class="e">ais</span></td><td><span class="stem">ser</span><span class="e">ais</span></td><td><span class="stem">aur</span><span class="e">ais</span></td><td><span class="stem">ir</span><span class="e">ais</span></td><td><span class="stem">fer</span><span class="e">ais</span></td><td><span class="stem">voudr</span><span class="e">ais</span></td></tr>
+              <tr><td class="person">tu</td><td><span class="stem">parler</span><span class="e">ais</span></td><td><span class="stem">ser</span><span class="e">ais</span></td><td><span class="stem">aur</span><span class="e">ais</span></td><td><span class="stem">ir</span><span class="e">ais</span></td><td><span class="stem">fer</span><span class="e">ais</span></td><td><span class="stem">voudr</span><span class="e">ais</span></td></tr>
+              <tr><td class="person">il/elle</td><td><span class="stem">parler</span><span class="e">ait</span></td><td><span class="stem">ser</span><span class="e">ait</span></td><td><span class="stem">aur</span><span class="e">ait</span></td><td><span class="stem">ir</span><span class="e">ait</span></td><td><span class="stem">fer</span><span class="e">ait</span></td><td><span class="stem">voudr</span><span class="e">ait</span></td></tr>
+              <tr><td class="person">nous</td><td><span class="stem">parler</span><span class="e">ions</span></td><td><span class="stem">ser</span><span class="e">ions</span></td><td><span class="stem">aur</span><span class="e">ions</span></td><td><span class="stem">ir</span><span class="e">ions</span></td><td><span class="stem">fer</span><span class="e">ions</span></td><td><span class="stem">voudr</span><span class="e">ions</span></td></tr>
+              <tr><td class="person">vous</td><td><span class="stem">parler</span><span class="e">iez</span></td><td><span class="stem">ser</span><span class="e">iez</span></td><td><span class="stem">aur</span><span class="e">iez</span></td><td><span class="stem">ir</span><span class="e">iez</span></td><td><span class="stem">fer</span><span class="e">iez</span></td><td><span class="stem">voudr</span><span class="e">iez</span></td></tr>
+              <tr><td class="person">ils/elles</td><td><span class="stem">parler</span><span class="e">aient</span></td><td><span class="stem">ser</span><span class="e">aient</span></td><td><span class="stem">aur</span><span class="e">aient</span></td><td><span class="stem">ir</span><span class="e">aient</span></td><td><span class="stem">fer</span><span class="e">aient</span></td><td><span class="stem">voudr</span><span class="e">aient</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Je voudrais un café, s'il vous plaît.</div>
+          <div class="example-de">→ Ich hätte gerne einen Kaffee, bitte. (Höflichkeit)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Si j'avais de l'argent, j'achèterais une maison.</div>
+          <div class="example-de">→ Wenn ich Geld hätte, würde ich ein Haus kaufen. (si + Imparfait → Conditionnel)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Le président serait malade, selon la presse.</div>
+          <div class="example-de">→ Der Präsident soll krank sein, laut der Presse. (Unbestätigte Information)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">J'aimerais voyager autour du monde.</div>
+          <div class="example-de">→ Ich würde gerne um die Welt reisen. (Wunsch)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Baukasten-Trick:</strong> Conditionnel = Futur-Stamm + Imparfait-Endungen. Du kennst schon beide Teile! Futur: <em>je parler<u>ai</u></em>. Conditionnel: <em>je parler<u>ais</u></em>. Hörst du den Unterschied? -ai [e] vs. -ais [ɛ] – im Alltag kaum hörbar!
+      </div>
+    </div>
+  </div>
+
+  <!-- CONDITIONNEL PASSÉ -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--conditionnel);">
+      <div>
+        <h3 style="color: var(--conditionnel);">Le Conditionnel Passé</h3>
+        <span class="tense-de">Konditional der Vergangenheit</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--conditionnel);">
+        Der <strong>Conditionnel passé</strong> drückt aus, was <strong>unter anderen Umständen in der Vergangenheit passiert wäre</strong>. Er steht für <strong>Bedauern, verpasste Chancen und irreale Vergangenheit</strong>. Das deutsche Äquivalent: „Ich hätte…gemacht / Ich wäre…gewesen".
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--conditionnel-light); color: var(--conditionnel);">Bedauern</span>
+        <span class="chip" style="background: var(--conditionnel-light); color: var(--conditionnel);">Irreale Vergangenheit</span>
+        <span class="chip" style="background: var(--conditionnel-light); color: var(--conditionnel);">si + Plus-que-parfait</span>
+        <span class="chip" style="background: var(--conditionnel-light); color: var(--conditionnel);">Vorwurf</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">avoir/être im Conditionnel présent</span><span class="plus">+</span><span class="ending">Participe passé</span></div>
+        </div>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler (avoir)</th><th>aller (être)</th><th>faire (avoir)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">je</td><td>j'<span class="stem">aurais</span> <span class="e">parlé</span></td><td>je <span class="stem">serais</span> <span class="e">allé(e)</span></td><td>j'<span class="stem">aurais</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">tu</td><td>tu <span class="stem">aurais</span> <span class="e">parlé</span></td><td>tu <span class="stem">serais</span> <span class="e">allé(e)</span></td><td>tu <span class="stem">aurais</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">il/elle</td><td>il <span class="stem">aurait</span> <span class="e">parlé</span></td><td>il <span class="stem">serait</span> <span class="e">allé</span></td><td>il <span class="stem">aurait</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">nous</td><td>nous <span class="stem">aurions</span> <span class="e">parlé</span></td><td>nous <span class="stem">serions</span> <span class="e">allé(e)s</span></td><td>nous <span class="stem">aurions</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">vous</td><td>vous <span class="stem">auriez</span> <span class="e">parlé</span></td><td>vous <span class="stem">seriez</span> <span class="e">allé(e)(s)</span></td><td>vous <span class="stem">auriez</span> <span class="e">fait</span></td></tr>
+              <tr><td class="person">ils/elles</td><td>ils <span class="stem">auraient</span> <span class="e">parlé</span></td><td>ils <span class="stem">seraient</span> <span class="e">allés</span></td><td>ils <span class="stem">auraient</span> <span class="e">fait</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Si j'avais su, je serais venu plus tôt.</div>
+          <div class="example-de">→ Wenn ich es gewusst hätte, wäre ich früher gekommen. (si + PQP → Cond. passé)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">J'aurais dû étudier davantage.</div>
+          <div class="example-de">→ Ich hätte mehr lernen sollen. (Bedauern)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Tu aurais pu me prévenir !</div>
+          <div class="example-de">→ Du hättest mich warnen können! (Vorwurf)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Die 3 si-Satz-Typen:</strong><br>
+        1️⃣ <strong>Realistisch:</strong> Si + Présent → Futur: <em>Si j'ai le temps, je <u>viendrai</u>.</em><br>
+        2️⃣ <strong>Irreal (Gegenwart):</strong> Si + Imparfait → Cond. présent: <em>Si j'avais le temps, je <u>viendrais</u>.</em><br>
+        3️⃣ <strong>Irreal (Vergangenheit):</strong> Si + Plus-que-parfait → Cond. passé: <em>Si j'avais eu le temps, je <u>serais venu</u>.</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- IMPÉRATIF -->
+<!-- ============================================================ -->
+<section class="modus-section tab-panel" id="imperatif" data-tab="imperatif">
+  <div class="modus-header" style="background: var(--imperatif-bg); border: 2px solid var(--imperatif-light);">
+    <h2 style="color: var(--imperatif);">
+      👉 L'Impératif
+      <span class="badge-de" style="color: var(--imperatif);">Befehlsform</span>
+    </h2>
+    <p>Der <strong>Impératif</strong> wird für <strong>Befehle, Aufforderungen, Ratschläge und Bitten</strong> verwendet. Besonderheit: Er hat <strong>nur 3 Formen</strong> (tu, nous, vous) und wird <strong>ohne Subjektpronomen</strong> verwendet!</p>
+  </div>
+
+  <!-- IMPÉRATIF PRÉSENT -->
+  <div class="tense-card everyday">
+    <div class="tense-header" style="border-left: 4px solid var(--imperatif);">
+      <div>
+        <h3 style="color: var(--imperatif);">L'Impératif Présent</h3>
+        <span class="tense-de">Befehlsform der Gegenwart</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--imperatif);">
+        Die <strong>Standardform</strong> des Impératif. Direkte Befehle, Vorschläge und Aufforderungen. Identisch mit dem Présent, aber <strong>ohne Subjektpronomen</strong>. Achtung: Bei -er Verben fällt das <strong>-s</strong> bei der tu-Form weg!
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--imperatif-light); color: var(--imperatif);">Befehl</span>
+        <span class="chip" style="background: var(--imperatif-light); color: var(--imperatif);">Aufforderung</span>
+        <span class="chip" style="background: var(--imperatif-light); color: var(--imperatif);">Ratschlag</span>
+        <span class="chip" style="background: var(--imperatif-light); color: var(--imperatif);">Vorschlag (nous)</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p>Wie Présent (Indicatif), aber <strong>ohne Subjektpronomen</strong>:</p>
+        <div style="margin: 8px 0;">
+          <div class="formula">(tu) → <span class="stem">Parl</span><span class="ending">e</span> ! &nbsp; (nous) → <span class="stem">Parl</span><span class="ending">ons</span> ! &nbsp; (vous) → <span class="stem">Parl</span><span class="ending">ez</span> !</div>
+        </div>
+        <p style="margin-top: 8px;">⚠️ <strong>-er Verben + aller:</strong> Kein <strong>-s</strong> bei tu! <em>Parle !</em> (nicht *Parles). <em>Va !</em> (nicht *Vas). ABER: <em>Vas-y !</em> (vor -y und -en kommt das -s zurück!)</p>
+      </div>
+      <div class="conj-tables">
+        <h4>📋 Konjugationstabellen</h4>
+        <div class="conj-scroll">
+          <table class="conj">
+            <thead>
+              <tr><th>Person</th><th>parler 🗣️</th><th>être ⭐</th><th>avoir ⭐</th><th>aller 🚶</th><th>faire 🔧</th><th>savoir 🧠</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="person">(tu)</td><td><span class="stem">parl</span><span class="e">e</span></td><td>sois</td><td>aie</td><td>va</td><td>fais</td><td>sache</td></tr>
+              <tr><td class="person">(nous)</td><td><span class="stem">parl</span><span class="e">ons</span></td><td>soyons</td><td>ayons</td><td>allons</td><td>faisons</td><td>sachons</td></tr>
+              <tr><td class="person">(vous)</td><td><span class="stem">parl</span><span class="e">ez</span></td><td>soyez</td><td>ayez</td><td>allez</td><td>faites</td><td>sachez</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Parle plus fort !</div>
+          <div class="example-de">→ Sprich lauter! (Befehl, informell)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Allons au cinéma !</div>
+          <div class="example-de">→ Lass uns ins Kino gehen! (Vorschlag mit nous)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Soyez patients, s'il vous plaît.</div>
+          <div class="example-de">→ Seien Sie geduldig, bitte. (Höfliche Aufforderung)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">N'aie pas peur !</div>
+          <div class="example-de">→ Hab keine Angst! (Verneinung: ne + Imperativ + pas)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Pronomen beim Impératif:</strong> Bejahend → Pronomen NACH dem Verb mit Bindestrich: <em>Regarde-<u>moi</u> ! Fais-<u>le</u> ! Vas-<u>y</u> !</em> Verneint → Pronomen VOR dem Verb: <em>Ne <u>me</u> regarde pas ! Ne <u>le</u> fais pas !</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPÉRATIF PASSÉ -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--imperatif);">
+      <div>
+        <h3 style="color: var(--imperatif);">L'Impératif Passé</h3>
+        <span class="tense-de">Befehlsform der Vergangenheit – SELTEN</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--imperatif);">
+        ⚠️ <strong>Sehr selten!</strong> Drückt aus, dass eine Handlung <strong>vor einem bestimmten Zeitpunkt abgeschlossen sein soll</strong>. „Habe das bis morgen erledigt!"
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">avoir/être im Impératif présent</span><span class="plus">+</span><span class="ending">Participe passé</span></div>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Aie fini tes devoirs avant 18 heures !</div>
+          <div class="example-de">→ Habe deine Hausaufgaben vor 18 Uhr fertig!</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Soyez partis avant midi.</div>
+          <div class="example-de">→ Seid vor Mittag weg.</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Praxishinweis:</strong> Diese Form ist extrem selten. Im Alltag sagst du einfach: <em>Finis tes devoirs avant 18h !</em> (Impératif présent). Aber gut zu wissen, dass es sie gibt!
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- INFINITIF -->
+<!-- ============================================================ -->
+<section class="modus-section tab-panel" id="infinitif" data-tab="infinitif">
+  <div class="modus-header" style="background: var(--infinitif-bg); border: 2px solid var(--infinitif-light);">
+    <h2 style="color: var(--infinitif);">
+      ♾️ L'Infinitif
+      <span class="badge-de" style="color: var(--infinitif);">Grundform / Nennform</span>
+    </h2>
+    <p>Der <strong>Infinitif</strong> ist die <strong>unkonjugierte Grundform</strong> des Verbs – die Form, die du im Wörterbuch findest. Er kann als Substantiv, nach Präpositionen und nach bestimmten Verben verwendet werden.</p>
+  </div>
+
+  <!-- INFINITIF PRÉSENT -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--infinitif);">
+      <div>
+        <h3 style="color: var(--infinitif);">L'Infinitif Présent</h3>
+        <span class="tense-de">Grundform der Gegenwart</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--infinitif);">
+        Die <strong>Grundform</strong> des Verbs, wie sie im Wörterbuch steht: parler, être, avoir, faire, aller… Wird nach bestimmten Verben, nach Präpositionen und als Subjekt/Objekt verwendet.
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--infinitif-light); color: var(--infinitif);">Nach Modalverben</span>
+        <span class="chip" style="background: var(--infinitif-light); color: var(--infinitif);">Nach Präpositionen</span>
+        <span class="chip" style="background: var(--infinitif-light); color: var(--infinitif);">Als Subjekt</span>
+        <span class="chip" style="background: var(--infinitif-light); color: var(--infinitif);">Anweisungen</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p>Die unveränderliche Wörterbuchform. Drei Hauptgruppen:</p>
+        <div style="margin: 8px 0; display: flex; flex-wrap: wrap; gap: 8px;">
+          <div class="formula">1. Gruppe: <span class="ending">-er</span> (parler, manger, aller)</div>
+          <div class="formula">2. Gruppe: <span class="ending">-ir</span> (finir, choisir)</div>
+          <div class="formula">3. Gruppe: <span class="ending">-re / -ir / -oir</span> (être, faire, voir, venir)</div>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Je veux <u>parler</u> français.</div>
+          <div class="example-de">→ Ich will Französisch sprechen. (Nach Modalverb)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Il est parti sans <u>dire</u> au revoir.</div>
+          <div class="example-de">→ Er ist gegangen, ohne sich zu verabschieden. (Nach Präposition „sans")</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr"><u>Vivre</u>, c'est apprendre.</div>
+          <div class="example-de">→ Leben heißt lernen. (Infinitiv als Subjekt)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Ne pas <u>toucher</u> !</div>
+          <div class="example-de">→ Nicht berühren! (Anweisung/Schild)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Verb + Infinitiv – mit oder ohne Präposition?</strong> Das muss man lernen: <em>vouloir/pouvoir/devoir</em> → direkt. <em>commencer <u>à</u></em>, <em>apprendre <u>à</u></em>. <em>essayer <u>de</u></em>, <em>décider <u>de</u></em>. Es gibt keine feste Regel – es ist wie deutsche Verben mit bestimmten Präpositionen!
+      </div>
+    </div>
+  </div>
+
+  <!-- INFINITIF PASSÉ -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--infinitif);">
+      <div>
+        <h3 style="color: var(--infinitif);">L'Infinitif Passé</h3>
+        <span class="tense-de">Grundform der Vergangenheit</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--infinitif);">
+        Der <strong>Infinitif passé</strong> drückt eine <strong>abgeschlossene Handlung</strong> im Infinitiv aus. „Nachdem ich … getan habe" / „… getan zu haben".
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">avoir / être</span><span class="plus">+</span><span class="ending">Participe passé</span></div>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Après <u>avoir mangé</u>, il est sorti.</div>
+          <div class="example-de">→ Nachdem er gegessen hatte, ging er raus.</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">Je regrette d'<u>être parti</u> si tôt.</div>
+          <div class="example-de">→ Ich bedaure, so früh gegangen zu sein.</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Häufigste Verwendung:</strong> <em>après avoir/être + PP</em> = „nachdem man … hat/ist". Sehr nützlich zum Verbinden von Sätzen!
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PARTICIPE -->
+<!-- ============================================================ -->
+<section class="modus-section tab-panel" id="participe" data-tab="participe">
+  <div class="modus-header" style="background: var(--participe-bg); border: 2px solid var(--participe-light);">
+    <h2 style="color: var(--participe);">
+      🔗 Le Participe
+      <span class="badge-de" style="color: var(--participe);">Mittelwort</span>
+    </h2>
+    <p>Das <strong>Participe</strong> steht zwischen Verb und Adjektiv. Es gibt zwei Formen: das <strong>Participe présent</strong> (gleichzeitige/andauernde Handlung) und das <strong>Participe passé</strong> (abgeschlossene Handlung, verwendet in allen zusammengesetzten Zeiten).</p>
+  </div>
+
+  <!-- PARTICIPE PRÉSENT -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--participe);">
+      <div>
+        <h3 style="color: var(--participe);">Le Participe Présent</h3>
+        <span class="tense-de">Mittelwort der Gegenwart</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--participe);">
+        Das <strong>Participe présent</strong> entspricht dem deutschen „-end" (sprechend, gehend). Es ist <strong>unveränderlich</strong> und beschreibt eine gleichzeitige Handlung oder einen Grund.
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <p>Stamm der <strong>nous-Form im Présent</strong> + <strong>-ant</strong>:</p>
+        <div style="margin: 8px 0;">
+          <div class="formula">nous parl<u>ons</u> → <span class="stem">parl</span><span class="ending">ant</span> | nous fais<u>ons</u> → <span class="stem">fais</span><span class="ending">ant</span></div>
+        </div>
+        <p style="margin-top: 8px;">Ausnahmen: être → <strong>étant</strong>, avoir → <strong>ayant</strong>, savoir → <strong>sachant</strong></p>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Ne <u>sachant</u> pas quoi faire, elle est partie.</div>
+          <div class="example-de">→ Da sie nicht wusste, was sie tun sollte, ging sie. (Grund)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">J'ai vu un homme <u>portant</u> un chapeau rouge.</div>
+          <div class="example-de">→ Ich sah einen Mann, der einen roten Hut trug. (Gleichzeitigkeit)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Participe présent vs. Adjectif verbal:</strong> Das Participe présent ist unveränderlich: <em>une femme <u>parlant</u> fort</em>. Das Adjektiv verbal wird angeglichen: <em>une histoire <u>intéressante</u></em>. Manchmal unterscheiden sie sich sogar in der Schreibung: <em>fatiguant</em> (Verb) vs. <em>fatigant</em> (Adjektiv)!
+      </div>
+    </div>
+  </div>
+
+  <!-- PARTICIPE PASSÉ -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--participe);">
+      <div>
+        <h3 style="color: var(--participe);">Le Participe Passé</h3>
+        <span class="tense-de">Mittelwort der Vergangenheit</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--participe);">
+        Das <strong>Participe passé</strong> ist eines der wichtigsten Elemente der französischen Grammatik. Es wird in <strong>allen zusammengesetzten Zeiten</strong> gebraucht (Passé composé, Plus-que-parfait, etc.) und kann auch als <strong>Adjektiv</strong> stehen.
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0; display: flex; flex-wrap: wrap; gap: 8px;">
+          <div class="formula">-er → <span class="ending">-é</span> (parlé)</div>
+          <div class="formula">-ir → <span class="ending">-i</span> (fini)</div>
+          <div class="formula">-re → <span class="ending">-u</span> (vendu)</div>
+        </div>
+        <p style="margin-top: 10px;"><strong>Häufige unregelmäßige Formen:</strong></p>
+        <div class="conj-scroll" style="margin-top: 8px;">
+          <table class="conj" style="min-width: 400px;">
+            <thead>
+              <tr><th>Infinitiv</th><th>Participe passé</th><th>Infinitiv</th><th>Participe passé</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>être</td><td><span class="e">été</span></td><td>avoir</td><td><span class="e">eu</span></td></tr>
+              <tr><td>faire</td><td><span class="e">fait</span></td><td>dire</td><td><span class="e">dit</span></td></tr>
+              <tr><td>prendre</td><td><span class="e">pris</span></td><td>mettre</td><td><span class="e">mis</span></td></tr>
+              <tr><td>écrire</td><td><span class="e">écrit</span></td><td>lire</td><td><span class="e">lu</span></td></tr>
+              <tr><td>voir</td><td><span class="e">vu</span></td><td>pouvoir</td><td><span class="e">pu</span></td></tr>
+              <tr><td>vouloir</td><td><span class="e">voulu</span></td><td>savoir</td><td><span class="e">su</span></td></tr>
+              <tr><td>venir</td><td><span class="e">venu</span></td><td>devoir</td><td><span class="e">dû</span></td></tr>
+              <tr><td>ouvrir</td><td><span class="e">ouvert</span></td><td>mourir</td><td><span class="e">mort</span></td></tr>
+              <tr><td>naître</td><td><span class="e">né</span></td><td>connaître</td><td><span class="e">connu</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">La porte est <u>ouverte</u>.</div>
+          <div class="example-de">→ Die Tür ist offen/geöffnet. (Als Adjektiv → angeglichen!)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr"><u>Fatigués</u> par le voyage, ils se sont couchés tôt.</div>
+          <div class="example-de">→ Müde von der Reise, legten sie sich früh hin. (Absolutes Partizip)</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Angleichungsregeln:</strong><br>
+        1️⃣ Mit <strong>être</strong>: immer an das Subjekt angleichen: <em>Elle est allé<u>e</u>.</em><br>
+        2️⃣ Mit <strong>avoir</strong>: an ein direktes Objekt angleichen, das VOR dem Verb steht: <em>Les fleurs que j'ai acheté<u>es</u>.</em> Steht es nach dem Verb → keine Angleichung: <em>J'ai acheté des fleurs.</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- GÉRONDIF -->
+<!-- ============================================================ -->
+<section class="modus-section tab-panel" id="gerondif" data-tab="gerondif">
+  <div class="modus-header" style="background: var(--gerondif-bg); border: 2px solid var(--gerondif-light);">
+    <h2 style="color: var(--gerondif);">
+      ⚡ Le Gérondif
+      <span class="badge-de" style="color: var(--gerondif);">Verlaufsform / „beim …en"</span>
+    </h2>
+    <p>Der <strong>Gérondif</strong> beschreibt eine Handlung, die <strong>gleichzeitig mit einer anderen</strong> stattfindet. Er entspricht dem deutschen „beim …en" / „indem …" / „während …". Erkennbar am <strong>en + Partizip Präsens (-ant)</strong>.</p>
+  </div>
+
+  <!-- GÉRONDIF PRÉSENT -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--gerondif);">
+      <div>
+        <h3 style="color: var(--gerondif);">Le Gérondif Présent</h3>
+        <span class="tense-de">„Beim …en" / „Indem man…"</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--gerondif);">
+        Die <strong>häufigste Form</strong> des Gérondif. Drückt <strong>Gleichzeitigkeit, Art und Weise, Bedingung oder Gegensatz</strong> (mit „tout") aus. Wichtig: Das Subjekt des Gérondif muss das gleiche wie das des Hauptsatzes sein!
+      </div>
+      <div class="usage-chips">
+        <span class="chip" style="background: var(--gerondif-light); color: var(--gerondif);">Gleichzeitigkeit</span>
+        <span class="chip" style="background: var(--gerondif-light); color: var(--gerondif);">Art und Weise</span>
+        <span class="chip" style="background: var(--gerondif-light); color: var(--gerondif);">Bedingung</span>
+        <span class="chip" style="background: var(--gerondif-light); color: var(--gerondif);">Gegensatz (tout en…)</span>
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">en</span><span class="plus">+</span><span class="ending">Participe présent (-ant)</span></div>
+        </div>
+        <p style="margin-top: 8px;">Beispiele: en parlant, en faisant, en allant, en étant, en ayant</p>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr">Il écoute de la musique <u>en travaillant</u>.</div>
+          <div class="example-de">→ Er hört Musik beim Arbeiten. (Gleichzeitigkeit)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr">J'ai appris le français <u>en regardant</u> des films.</div>
+          <div class="example-de">→ Ich habe Französisch gelernt, indem ich Filme geschaut habe. (Art und Weise)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr"><u>En étudiant</u> plus, tu réussiras.</div>
+          <div class="example-de">→ Wenn du mehr lernst, wirst du Erfolg haben. (Bedingung)</div>
+        </div>
+        <div class="example-item">
+          <div class="example-fr"><u>Tout en sachant</u> la vérité, il n'a rien dit.</div>
+          <div class="example-de">→ Obwohl er die Wahrheit kannte, sagte er nichts. (Gegensatz mit „tout")</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Gérondif vs. Participe présent:</strong> Gérondif hat immer <strong>en</strong> davor! <em><u>En</u> parlant</em> = Gérondif (Subjekt = Hauptsatz). <em>Parlant</em> allein = Participe présent (kann sich auf jedes Nomen beziehen).
+      </div>
+    </div>
+  </div>
+
+  <!-- GÉRONDIF PASSÉ -->
+  <div class="tense-card">
+    <div class="tense-header" style="border-left: 4px solid var(--gerondif);">
+      <div>
+        <h3 style="color: var(--gerondif);">Le Gérondif Passé</h3>
+        <span class="tense-de">„Nachdem man … hat" – SELTEN</span>
+      </div>
+      <span class="chevron">▼</span>
+    </div>
+    <div class="tense-body">
+      <div class="desc-box" style="border-color: var(--gerondif);">
+        ⚠️ <strong>Sehr selten!</strong> Drückt eine Handlung aus, die <strong>vor der Haupthandlung abgeschlossen</strong> wurde.
+      </div>
+      <div class="formation-box">
+        <h4>📐 Bildungsregel</h4>
+        <div style="margin: 8px 0;">
+          <div class="formula"><span class="stem">en</span><span class="plus">+</span><span class="ending">ayant / étant + Participe passé</span></div>
+        </div>
+      </div>
+      <div class="examples">
+        <h4>💬 Beispielsätze</h4>
+        <div class="example-item">
+          <div class="example-fr"><u>En ayant fini</u> ses études, il a cherché du travail.</div>
+          <div class="example-de">→ Nachdem er sein Studium beendet hatte, suchte er Arbeit.</div>
+        </div>
+      </div>
+      <div class="tipp-box">
+        <strong>Praxishinweis:</strong> Im Alltag benutzt man lieber <em>après avoir fini</em> (Infinitif passé). Der Gérondif passé ist stilistisch gehoben.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- ÜBERSICHTSTABELLE -->
+<!-- ============================================================ -->
+</div><!-- /tab-content-area -->
+
+<div class="footer-overview" id="uebersicht">
+  <h2>📋 Gesamtübersicht: Alle Modi und Zeiten</h2>
+  <div class="overview-scroll">
+    <table class="overview">
+      <thead>
+        <tr>
+          <th>Modus</th>
+          <th>Zeit</th>
+          <th>Bildung</th>
+          <th>Beispiel</th>
+          <th>Verwendung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- INDICATIF -->
+        <tr style="background: var(--indicatif-bg);">
+          <td rowspan="9" style="font-weight:800; color: var(--indicatif); vertical-align: middle;">INDICATIF</td>
+          <td><strong>Présent</strong></td>
+          <td>Stamm + Endungen</td>
+          <td><em>je parle</em></td>
+          <td>Gegenwart, Gewohnheit</td>
+        </tr>
+        <tr style="background: var(--indicatif-bg);">
+          <td><strong>Imparfait</strong></td>
+          <td>nous-Stamm + -ais…</td>
+          <td><em>je parlais</em></td>
+          <td>Hintergrund, Beschreibung</td>
+        </tr>
+        <tr style="background: var(--indicatif-bg);">
+          <td><strong>Passé composé</strong></td>
+          <td>avoir/être + PP</td>
+          <td><em>j'ai parlé</em></td>
+          <td>Abgeschlossene Handlung</td>
+        </tr>
+        <tr style="background: var(--indicatif-bg);">
+          <td><strong>Passé simple</strong></td>
+          <td>Stamm + eigene End.</td>
+          <td><em>je parlai</em></td>
+          <td>Literarisch</td>
+        </tr>
+        <tr style="background: var(--indicatif-bg);">
+          <td><strong>Plus-que-parfait</strong></td>
+          <td>avoir/être (Imp.) + PP</td>
+          <td><em>j'avais parlé</em></td>
+          <td>Vorvergangenheit</td>
+        </tr>
+        <tr style="background: var(--indicatif-bg);">
+          <td><strong>Futur simple</strong></td>
+          <td>Infinitiv + -ai, -as…</td>
+          <td><em>je parlerai</em></td>
+          <td>Zukunft</td>
+        </tr>
+        <tr style="background: var(--indicatif-bg);">
+          <td><strong>Futur antérieur</strong></td>
+          <td>avoir/être (Futur) + PP</td>
+          <td><em>j'aurai parlé</em></td>
+          <td>Vorzukunft</td>
+        </tr>
+        <tr style="background: var(--indicatif-bg);">
+          <td><strong>Futur proche</strong></td>
+          <td>aller + Infinitiv</td>
+          <td><em>je vais parler</em></td>
+          <td>Nahe Zukunft</td>
+        </tr>
+        <tr style="background: var(--indicatif-bg);">
+          <td><strong>Passé récent</strong></td>
+          <td>venir de + Infinitiv</td>
+          <td><em>je viens de parler</em></td>
+          <td>Gerade eben</td>
+        </tr>
+        <!-- SUBJONCTIF -->
+        <tr style="background: var(--subjonctif-bg);">
+          <td rowspan="4" style="font-weight:800; color: var(--subjonctif); vertical-align: middle;">SUBJONCTIF</td>
+          <td><strong>Présent</strong></td>
+          <td>ils-Stamm + -e, -ions…</td>
+          <td><em>que je parle</em></td>
+          <td>Wunsch, Gefühl, Zweifel</td>
+        </tr>
+        <tr style="background: var(--subjonctif-bg);">
+          <td><strong>Passé</strong></td>
+          <td>avoir/être (Subj.) + PP</td>
+          <td><em>que j'aie parlé</em></td>
+          <td>Abgeschl. im Subj.</td>
+        </tr>
+        <tr style="background: var(--subjonctif-bg);">
+          <td><strong>Imparfait</strong> 📚</td>
+          <td>PS-Stamm + -asse…</td>
+          <td><em>que je parlasse</em></td>
+          <td>Literarisch</td>
+        </tr>
+        <tr style="background: var(--subjonctif-bg);">
+          <td><strong>Plus-que-parfait</strong> 📚</td>
+          <td>avoir/être (Subj.Imp.) + PP</td>
+          <td><em>que j'eusse parlé</em></td>
+          <td>Extrem literarisch</td>
+        </tr>
+        <!-- CONDITIONNEL -->
+        <tr style="background: var(--conditionnel-bg);">
+          <td rowspan="2" style="font-weight:800; color: var(--conditionnel); vertical-align: middle;">CONDITIONNEL</td>
+          <td><strong>Présent</strong></td>
+          <td>Futur-Stamm + -ais…</td>
+          <td><em>je parlerais</em></td>
+          <td>Höflichkeit, Hypothese</td>
+        </tr>
+        <tr style="background: var(--conditionnel-bg);">
+          <td><strong>Passé</strong></td>
+          <td>avoir/être (Cond.) + PP</td>
+          <td><em>j'aurais parlé</em></td>
+          <td>Irreale Vergangenheit</td>
+        </tr>
+        <!-- IMPÉRATIF -->
+        <tr style="background: var(--imperatif-bg);">
+          <td rowspan="2" style="font-weight:800; color: var(--imperatif); vertical-align: middle;">IMPÉRATIF</td>
+          <td><strong>Présent</strong></td>
+          <td>Wie Présent, ohne Subj.</td>
+          <td><em>Parle ! Parlons !</em></td>
+          <td>Befehl, Aufforderung</td>
+        </tr>
+        <tr style="background: var(--imperatif-bg);">
+          <td><strong>Passé</strong></td>
+          <td>avoir/être (Imp.) + PP</td>
+          <td><em>Aie parlé !</em></td>
+          <td>Selten</td>
+        </tr>
+        <!-- INFINITIF -->
+        <tr style="background: var(--infinitif-bg);">
+          <td rowspan="2" style="font-weight:800; color: var(--infinitif); vertical-align: middle;">INFINITIF</td>
+          <td><strong>Présent</strong></td>
+          <td>Grundform</td>
+          <td><em>parler</em></td>
+          <td>Nach Verben/Präpositionen</td>
+        </tr>
+        <tr style="background: var(--infinitif-bg);">
+          <td><strong>Passé</strong></td>
+          <td>avoir/être + PP</td>
+          <td><em>avoir parlé</em></td>
+          <td>Vorzeitigkeit</td>
+        </tr>
+        <!-- PARTICIPE -->
+        <tr style="background: var(--participe-bg);">
+          <td rowspan="2" style="font-weight:800; color: var(--participe); vertical-align: middle;">PARTICIPE</td>
+          <td><strong>Présent</strong></td>
+          <td>nous-Stamm + -ant</td>
+          <td><em>parlant</em></td>
+          <td>Gleichzeitigkeit</td>
+        </tr>
+        <tr style="background: var(--participe-bg);">
+          <td><strong>Passé</strong></td>
+          <td>-é / -i / -u / unregel.</td>
+          <td><em>parlé</em></td>
+          <td>Zusammenges. Zeiten, Adj.</td>
+        </tr>
+        <!-- GÉRONDIF -->
+        <tr style="background: var(--gerondif-bg);">
+          <td rowspan="2" style="font-weight:800; color: var(--gerondif); vertical-align: middle;">GÉRONDIF</td>
+          <td><strong>Présent</strong></td>
+          <td>en + Participe présent</td>
+          <td><em>en parlant</em></td>
+          <td>Beim …en, indem</td>
+        </tr>
+        <tr style="background: var(--gerondif-bg);">
+          <td><strong>Passé</strong></td>
+          <td>en ayant/étant + PP</td>
+          <td><em>en ayant parlé</em></td>
+          <td>Selten</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="text-align: center; margin-top: 20px; color: var(--text-secondary); font-size: 0.9rem;">
+    📚 = literarisch / nur passive Erkennung &nbsp;|&nbsp; PP = Participe passé &nbsp;|&nbsp; Imp. = Imparfait &nbsp;|&nbsp; Subj. = Subjonctif &nbsp;|&nbsp; Cond. = Conditionnel
+  </p>
+
+  <!-- SI-SÄTZE ÜBERSICHT -->
+  <div style="margin-top: 30px; padding: 24px; background: var(--conditionnel-bg); border-radius: 16px; border: 1.5px solid var(--conditionnel-light);">
+    <h3 style="color: var(--conditionnel); margin-bottom: 14px;">🔑 Die 3 si-Satz-Typen (Konditionalsätze)</h3>
+
+    <!-- Desktop table -->
+    <div class="si-table-desktop">
+      <div class="conj-scroll">
+      <table class="conj" style="min-width: 0;">
+        <thead>
+          <tr><th>Typ</th><th>si-Teil (Bedingung)</th><th>Hauptsatz (Folge)</th><th>Beispiel</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Realistisch</strong></td>
+            <td>si + <span class="e">Présent</span></td>
+            <td><span class="e">Futur simple</span></td>
+            <td><em>Si j'<u>ai</u> le temps, je <u>viendrai</u>.</em></td>
+          </tr>
+          <tr>
+            <td><strong>Irreal (jetzt)</strong></td>
+            <td>si + <span class="e">Imparfait</span></td>
+            <td><span class="e">Conditionnel présent</span></td>
+            <td><em>Si j'<u>avais</u> le temps, je <u>viendrais</u>.</em></td>
+          </tr>
+          <tr>
+            <td><strong>Irreal (damals)</strong></td>
+            <td>si + <span class="e">Plus-que-parfait</span></td>
+            <td><span class="e">Conditionnel passé</span></td>
+            <td><em>Si j'<u>avais eu</u> le temps, je <u>serais venu</u>.</em></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- Mobile cards -->
+    <div class="si-table-mobile" style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="background: var(--white); border-radius: 12px; padding: 14px; box-shadow: var(--card-shadow);">
+        <div style="font-weight: 700; color: var(--conditionnel); margin-bottom: 6px;">1. Realistisch</div>
+        <div style="font-size: 0.88rem;"><strong>si +</strong> <span class="e">Présent</span> → <span class="e">Futur simple</span></div>
+        <div style="margin-top: 6px; font-style: italic; color: var(--stem); font-size: 0.9rem;">Si j'ai le temps, je viendrai.</div>
+      </div>
+      <div style="background: var(--white); border-radius: 12px; padding: 14px; box-shadow: var(--card-shadow);">
+        <div style="font-weight: 700; color: var(--conditionnel); margin-bottom: 6px;">2. Irreal (jetzt)</div>
+        <div style="font-size: 0.88rem;"><strong>si +</strong> <span class="e">Imparfait</span> → <span class="e">Conditionnel présent</span></div>
+        <div style="margin-top: 6px; font-style: italic; color: var(--stem); font-size: 0.9rem;">Si j'avais le temps, je viendrais.</div>
+      </div>
+      <div style="background: var(--white); border-radius: 12px; padding: 14px; box-shadow: var(--card-shadow);">
+        <div style="font-weight: 700; color: var(--conditionnel); margin-bottom: 6px;">3. Irreal (damals)</div>
+        <div style="font-size: 0.88rem;"><strong>si +</strong> <span class="e">Plus-que-parfait</span> → <span class="e">Conditionnel passé</span></div>
+        <div style="margin-top: 6px; font-style: italic; color: var(--stem); font-size: 0.9rem;">Si j'avais eu le temps, je serais venu.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZUSAMMENGESETZTE ZEITEN MUSTER -->
+  <div style="margin-top: 30px; padding: 24px; background: var(--infinitif-bg); border-radius: 16px; border: 1.5px solid var(--infinitif-light);">
+    <h3 style="color: var(--infinitif); margin-bottom: 14px;">🧩 Muster: Zusammengesetzte Zeiten</h3>
+    <p style="margin-bottom: 12px; color: var(--text);">Alle zusammengesetzten Zeiten folgen dem <strong>gleichen Prinzip</strong>:</p>
+    <div class="formula" style="font-size: 1.05rem; margin-bottom: 14px;">
+      <span class="stem">Hilfsverb (avoir/être)</span> in einer einfachen Zeit <span class="plus">+</span> <span class="ending">Participe passé</span>
+    </div>
+
+    <!-- Desktop table -->
+    <div class="si-table-desktop">
+      <div class="conj-scroll">
+      <table class="conj" style="min-width: 0;">
+        <thead>
+          <tr><th>Zusammengesetzte Zeit</th><th>Hilfsverb in…</th><th>Beispiel (parler)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Passé composé</td><td>Présent</td><td>j'<span class="e">ai</span> parlé</td></tr>
+          <tr><td>Plus-que-parfait</td><td>Imparfait</td><td>j'<span class="e">avais</span> parlé</td></tr>
+          <tr><td>Futur antérieur</td><td>Futur simple</td><td>j'<span class="e">aurai</span> parlé</td></tr>
+          <tr><td>Conditionnel passé</td><td>Conditionnel prés.</td><td>j'<span class="e">aurais</span> parlé</td></tr>
+          <tr><td>Subjonctif passé</td><td>Subjonctif prés.</td><td>que j'<span class="e">aie</span> parlé</td></tr>
+          <tr><td>Infinitif passé</td><td>Infinitif</td><td><span class="e">avoir</span> parlé</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- Mobile cards -->
+    <div class="si-table-mobile" style="display: flex; flex-direction: column; gap: 8px;">
+      <div style="background: var(--white); border-radius: 10px; padding: 12px; box-shadow: var(--card-shadow); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px;">
+        <strong style="color: var(--text);">Passé composé</strong>
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">Présent →</span>
+        <span style="font-family: monospace; color: var(--stem);">j'<span class="e">ai</span> parlé</span>
+      </div>
+      <div style="background: var(--white); border-radius: 10px; padding: 12px; box-shadow: var(--card-shadow); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px;">
+        <strong style="color: var(--text);">Plus-que-parfait</strong>
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">Imparfait →</span>
+        <span style="font-family: monospace; color: var(--stem);">j'<span class="e">avais</span> parlé</span>
+      </div>
+      <div style="background: var(--white); border-radius: 10px; padding: 12px; box-shadow: var(--card-shadow); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px;">
+        <strong style="color: var(--text);">Futur antérieur</strong>
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">Futur simple →</span>
+        <span style="font-family: monospace; color: var(--stem);">j'<span class="e">aurai</span> parlé</span>
+      </div>
+      <div style="background: var(--white); border-radius: 10px; padding: 12px; box-shadow: var(--card-shadow); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px;">
+        <strong style="color: var(--text);">Conditionnel passé</strong>
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">Cond. prés. →</span>
+        <span style="font-family: monospace; color: var(--stem);">j'<span class="e">aurais</span> parlé</span>
+      </div>
+      <div style="background: var(--white); border-radius: 10px; padding: 12px; box-shadow: var(--card-shadow); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px;">
+        <strong style="color: var(--text);">Subjonctif passé</strong>
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">Subj. prés. →</span>
+        <span style="font-family: monospace; color: var(--stem);">que j'<span class="e">aie</span> parlé</span>
+      </div>
+      <div style="background: var(--white); border-radius: 10px; padding: 12px; box-shadow: var(--card-shadow); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px;">
+        <strong style="color: var(--text);">Infinitif passé</strong>
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">Infinitif →</span>
+        <span style="font-family: monospace; color: var(--stem);"><span class="e">avoir</span> parlé</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+// Accordion toggle
+document.querySelectorAll('.tense-header').forEach(header => {
+  header.addEventListener('click', () => {
+    header.closest('.tense-card').classList.toggle('open');
+  });
+});
+
+// Tab system
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Deactivate all tabs and panels
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    // Activate clicked tab and matching panel
+    btn.classList.add('active');
+    const tabId = btn.dataset.tab;
+    const panel = document.querySelector(`.tab-panel[data-tab="${tabId}"]`);
+    if (panel) panel.classList.add('active');
+    // Scroll tab-nav into view
+    document.getElementById('tab-nav').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+});
+
+// Nav links → switch to tab
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href === '#uebersicht') {
+      e.preventDefault();
+      document.getElementById('uebersicht').scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const tabId = href.slice(1);
+      const tabBtn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+      if (tabBtn) tabBtn.click();
+    }
+  });
+});
+
+// Modi cards in hero → switch to tab
+document.querySelectorAll('.modi-card').forEach(card => {
+  card.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = card.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const tabId = href.slice(1);
+      const tabBtn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+      if (tabBtn) tabBtn.click();
+    }
+  });
+});
+
+// "Alle öffnen/schließen" button per section
+document.querySelectorAll('.modus-header').forEach(header => {
+  const btn = document.createElement('button');
+  btn.textContent = 'Alle aufklappen ▼';
+  btn.style.cssText = 'margin-top:12px;padding:8px 18px;border-radius:980px;border:none;background:rgba(0,0,0,0.06);color:inherit;font-weight:600;font-size:0.82rem;cursor:pointer;letter-spacing:-0.01em;transition:background 0.2s;';
+  btn.addEventListener('click', () => {
+    const section = header.closest('.modus-section');
+    const cards = section.querySelectorAll('.tense-card');
+    const allOpen = [...cards].every(c => c.classList.contains('open'));
+    cards.forEach(c => {
+      if (allOpen) c.classList.remove('open');
+      else c.classList.add('open');
+    });
+    btn.textContent = allOpen ? 'Alle aufklappen ▼' : 'Alle zuklappen ▲';
+  });
+  header.appendChild(btn);
+});
+</script>
+</body>
+</html>
